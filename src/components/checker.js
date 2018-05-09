@@ -32,6 +32,10 @@ import formatMessage from "../format-message"
 
 const noop = () => {}
 
+const randomString = formatMessage(
+  "this is a random string to check the i18n build.  It should be removed soon."
+)
+
 export default class Checker extends React.Component {
   constructor() {
     super()
