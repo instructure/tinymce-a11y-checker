@@ -12,7 +12,7 @@ import Link from "@instructure/ui-elements/lib/components/Link"
 import Checkbox from "@instructure/ui-forms/lib/components/Checkbox"
 import TextInput from "@instructure/ui-forms/lib/components/TextInput"
 import TextArea from "@instructure/ui-forms/lib/components/TextArea"
-import Select from "@instructure/ui-core/lib/components/Select"
+import Select from "@instructure/ui-forms/lib/components/Select"
 import Grid from "@instructure/ui-layout/lib/components/Grid"
 import GridRow from "@instructure/ui-layout/lib/components/Grid/GridRow"
 import GridCol from "@instructure/ui-layout/lib/components/Grid/GridCol"
@@ -201,12 +201,10 @@ export default class Checker extends React.Component {
     }
   }
 
-  updateFormState = ({ target }) => {
-    const formState = Object.assign({}, this.state.formState)
-    if (target.type === "checkbox") {
-      formState[target.name] = target.checked
-    } else {
-      formState[target.name] = target.value
+  updateFormState(key, value) {
+    const formState = {
+      ...this.state.formState,
+      [key]: value
     }
     this.setState({
       formState,
@@ -337,6 +335,9 @@ export default class Checker extends React.Component {
                       </GridCol>
                       <GridCol width="auto">
                         <Popover
+                          contentRef={e => {
+                            if (e) e.style.zIndex = 9999
+                          }}
                           on="click"
                           shouldContainFocus
                           shouldReturnFocus
@@ -446,12 +447,20 @@ export default class Checker extends React.Component {
     const disabled = !!f.disabledIf && f.disabledIf(this.state.formState)
     switch (true) {
       case !!f.options:
+        const selectedOption = f.options.find(
+          o => o[0] === this.state.formState[f.dataKey]
+        )
         return (
           <Select
             label={f.label}
             name={f.dataKey}
-            value={this.state.formState[f.dataKey]}
-            onChange={this.updateFormState}
+            selectedOption={
+              selectedOption && {
+                value: selectedOption[0],
+                label: selectedOption[1]
+              }
+            }
+            onChange={(_e, o) => this.updateFormState(f.dataKey, o.value)}
             disabled={disabled}
           >
             {f.options.map(o => (
@@ -467,7 +476,7 @@ export default class Checker extends React.Component {
             label={f.label}
             name={f.dataKey}
             checked={this.state.formState[f.dataKey]}
-            onChange={this.updateFormState}
+            onChange={e => this.updateFormState(f.dataKey, e.target.checked)}
             disabled={disabled}
           />
         )
@@ -477,7 +486,7 @@ export default class Checker extends React.Component {
             label={f.label}
             name={f.dataKey}
             value={this.state.formState[f.dataKey]}
-            onChange={this.updateFormState}
+            onChange={e => this.updateFormState(f.dataKey, e.target.value)}
           />
         )
       case f.textarea:
@@ -486,7 +495,7 @@ export default class Checker extends React.Component {
             label={f.label}
             name={f.dataKey}
             value={this.state.formState[f.dataKey]}
-            onChange={this.updateFormState}
+            onChange={e => this.updateFormState(f.dataKey, e.target.value)}
             disabled={disabled}
           />
         )
@@ -496,7 +505,7 @@ export default class Checker extends React.Component {
             label={f.label}
             name={f.dataKey}
             value={this.state.formState[f.dataKey]}
-            onChange={this.updateFormState}
+            onChange={e => this.updateFormState(f.dataKey, e.target.value)}
             disabled={disabled}
           />
         )
