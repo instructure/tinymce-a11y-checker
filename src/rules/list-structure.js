@@ -1,4 +1,4 @@
-import formatMessage from '../format-message'
+import formatMessage from "../format-message"
 
 /**
  * Handles:
@@ -10,15 +10,15 @@ import formatMessage from '../format-message'
 const listLikeRegex = /^\s*(?:[*|-])|(?:(\d+)[\)|\.])\s+/
 
 const isTextList = elem =>
-  elem.tagName === 'P' && listLikeRegex.test(elem.textContent)
+  elem.tagName === "P" && listLikeRegex.test(elem.textContent)
 
-const cleanListItem = element => {
-  if (element.nodeType === Node.TEXT_NODE) {
-    element.textContent = element.textContent.replace(listLikeRegex, '')
+const cleanListItem = elem => {
+  if (elem.nodeType === Node.TEXT_NODE) {
+    elem.textContent = elem.textContent.replace(listLikeRegex, "")
     return true
   }
 
-  for (let childElement of element.childNodes) {
+  for (let childElement of elem.childNodes) {
     let found = cleanListItem(childElement)
     if (found) return true
   }
@@ -49,39 +49,47 @@ export default {
 
   form: () => [
     {
-      label: formatMessage('Format as a list'),
+      label: formatMessage("Format as a list"),
       checkbox: true,
-      dataKey: 'formatAsList'
+      dataKey: "formatAsList"
     }
   ],
 
   update: function(elem, data) {
     const rootElem = elem.parentNode
+
     if (data.formatAsList) {
       const listContainer = document.createElement(
-        data.orderedStart ? 'ol' : 'ul'
+        data.orderedStart ? "ol" : "ul"
       )
 
       if (data.orderedStart && data.orderedStart !== 1) {
-        listContainer.setAttribute('start', data.orderedStart)
+        listContainer.setAttribute("start", data.orderedStart)
       }
 
       let cursor = elem
       while (cursor) {
         if (!isTextList(cursor)) break
 
-        const li = document.createElement('li')
+        const li = document.createElement("li")
         listContainer.appendChild(li)
 
         moveContents(cursor, li)
 
-        cleanListItem(li)
+        let nextSibling = cursor.nextElementSibling
+        // Remove cleared siblings
+        // Skip if elem because elem is replaced on completion.
+        if (cursor !== elem) cursor.parentNode.removeChild(cursor)
 
-        cursor = cursor.nextElementSibling
+        cursor = nextSibling
+
+        cleanListItem(li)
       }
 
       rootElem.replaceChild(listContainer, elem)
+      return listContainer
     }
+
     return elem
   },
 
@@ -89,12 +97,12 @@ export default {
     return elem.parentNode
   },
 
-  message: () => formatMessage('Lists should be formatted as lists.'),
+  message: () => formatMessage("Lists should be formatted as lists."),
 
   why: () =>
     formatMessage(
-      'When markup is used that visually formats items as a list but does not indicate the list relationship, users may have difficulty in navigating the information.'
+      "When markup is used that visually formats items as a list but does not indicate the list relationship, users may have difficulty in navigating the information."
     ),
 
-  link: 'https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/H48'
+  link: "https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/H48"
 }
