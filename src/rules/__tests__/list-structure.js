@@ -156,7 +156,7 @@ describe("update", () => {
     ).toBeTruthy()
   })
 
-  test("Resolves ordered with a start attribute", () => {
+  test("Resolves ordered lists with a start attribute", () => {
     p1.innerHTML = "<strong>1. Text</strong> Text"
     p2.innerHTML = "<strong>2. Text</strong> Text"
     p3.innerHTML = "<strong>3. Text</strong> Text"
@@ -170,6 +170,39 @@ describe("update", () => {
         child =>
           child.textContent === "Text Text" &&
           child.firstChild.tagName === "STRONG"
+      )
+    ).toBeTruthy()
+  })
+
+  test("Replaces bullets/numbers even when it is not in the first child", () => {
+    p1.innerHTML = "<div></div>1. List"
+    p2.innerHTML = "<div></div>2. List"
+    p3.innerHTML = "<div></div>3. List"
+
+    const newA = rule.update(p1, { ...rule.data(p1), formatAsList: true })
+
+    expect(body.firstChild.tagName).toBe("OL")
+    expect(body.firstChild.children.length).toBe(3)
+    expect(
+      [...body.firstChild.children].every(
+        child =>
+          child.textContent === "List" && child.firstChild.tagName === "DIV"
+      )
+    ).toBeTruthy()
+  })
+
+  test("Stops creating list items if a paragraph is not list-like", () => {
+    p1.innerHTML = "1. List"
+    p2.innerHTML = "2. List"
+    p3.innerHTML = "Normal Paragraph"
+
+    const newA = rule.update(p1, { ...rule.data(p1), formatAsList: true })
+
+    expect(body.firstChild.tagName).toBe("OL")
+    expect(body.firstChild.children.length).toBe(2)
+    expect(
+      [...body.firstChild.children].every(
+        child => child.textContent.trim() === "List"
       )
     ).toBeTruthy()
   })
