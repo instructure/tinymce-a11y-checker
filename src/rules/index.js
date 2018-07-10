@@ -1,14 +1,15 @@
-import imgAlt from "./img-alt"
-import imgAltFilename from "./img-alt-filename"
-import tableCaption from "./table-caption"
-import tableHeader from "./table-header"
-import tableHeaderScope from "./table-header-scope"
-import smallTextContrast from "./small-text-contrast"
-import largeTextContrast from "./large-text-contrast"
-import adjacentSameLinks from "./adjacent-links"
-import headingsSequence from "./headings-sequence"
-import imageAltLength from "./img-alt-length"
-import paragraphsForHeadings from "./paragraphs-for-headings"
+import imgAlt from './img-alt'
+import imgAltFilename from './img-alt-filename'
+import tableCaption from './table-caption'
+import tableHeader from './table-header'
+import tableHeaderScope from './table-header-scope'
+import smallTextContrast from './small-text-contrast'
+import largeTextContrast from './large-text-contrast'
+import adjacentSameLinks from './adjacent-links'
+import headingsSequence from './headings-sequence'
+import imageAltLength from './img-alt-length'
+import paragraphsForHeadings from './paragraphs-for-headings'
+import listStructure from './list-structure'
 
 export default [
   imgAlt,
@@ -21,5 +22,6 @@ export default [
   adjacentSameLinks,
   headingsSequence,
   imageAltLength,
-  paragraphsForHeadings
+  paragraphsForHeadings,
+  listStructure
 ]
