@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`data returns the proper object 1`] = `
+Object {
+  "href": null,
+}
+`;
+
+exports[`form returns the proper object 1`] = `
+Array [
+  Object {
+    "dataKey": "href",
+    "label": "Change the URL for this link",
+  },
+]
+`;
+
+exports[`message returns the proper message 1`] = `"Links should be valid."`;
+
+exports[`why returns the proper why message 1`] = `"Invalid links become broken links which are confusing to all users."`;

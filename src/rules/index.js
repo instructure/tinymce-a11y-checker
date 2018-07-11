@@ -10,6 +10,7 @@ import headingsSequence from "./headings-sequence"
 import imageAltLength from "./img-alt-length"
 import paragraphsForHeadings from "./paragraphs-for-headings"
 import listStructure from "./list-structure"
+import validLinks from "./valid-links"
 
 export default [
   imgAlt,
@@ -23,5 +24,5 @@ export default [
   headingsSequence,
   imageAltLength,
   paragraphsForHeadings,
-  listStructure
+  validLinks
 ]
