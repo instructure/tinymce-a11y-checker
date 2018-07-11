@@ -1,21 +1,21 @@
 import formatMessage from "../format-message"
 
 const isValidURL =
-  // typeof URL !== 'function'
-  url => {
-    try {
-      // the URL constructor is more accurate than regex
-      // but not supported in IE and some versions of jsdom.
-      new URL(url)
-      return true
-    } catch (_) {
-      return false
-    }
-  }
-// : url =>
-//     /((http|ftp|https|mailto):\/\/)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/.test(
-//       url
-//     )
+  typeof URL !== "function"
+    ? url => {
+        try {
+          // the URL constructor is more accurate than regex
+          // but not supported in IE and some versions of jsdom.
+          new URL(url)
+          return true
+        } catch (_) {
+          return false
+        }
+      }
+    : url =>
+        /((http|ftp|https|mailto):\/\/)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/.test(
+          url
+        )
 
 export default {
   test: function(elem) {
