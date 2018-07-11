@@ -156,7 +156,7 @@ describe("update", () => {
     ).toBeTruthy()
   })
 
-  test("Resolves ordered lists with a start attribute", () => {
+  test("Replaces the ordered part of the list even when nested in an element", () => {
     p1.innerHTML = "<strong>1. Text</strong> Text"
     p2.innerHTML = "<strong>2. Text</strong> Text"
     p3.innerHTML = "<strong>3. Text</strong> Text"
