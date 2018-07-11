@@ -206,6 +206,24 @@ describe("update", () => {
       )
     ).toBeTruthy()
   })
+
+  test("Stops creating list items if a paragraph is a different type of list", () => {
+    p1.innerHTML = "1. List"
+    p2.innerHTML = "2. List"
+    p3.innerHTML = "* List"
+
+    const newA = rule.update(p1, { ...rule.data(p1), formatAsList: true })
+
+    expect(body.firstChild.tagName).toBe("OL")
+    expect(body.firstChild.children.length).toBe(2)
+    expect(
+      [...body.firstChild.children].every(
+        child => child.textContent.trim() === "List"
+      )
+    ).toBeTruthy()
+    expect(body.children[1].tagName).toBe("P")
+    expect(body.children[1].textContent).toBe("* List")
+  })
 })
 
 describe("rootNode", () => {

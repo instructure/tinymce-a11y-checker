@@ -59,9 +59,8 @@ export default {
     const rootElem = elem.parentNode
 
     if (data.formatAsList) {
-      const listContainer = document.createElement(
-        data.orderedStart ? "ol" : "ul"
-      )
+      const isOrdered = Boolean(data.orderedStart)
+      const listContainer = document.createElement(isOrdered ? "ol" : "ul")
 
       if (data.orderedStart && data.orderedStart !== 1) {
         listContainer.setAttribute("start", data.orderedStart)
@@ -70,6 +69,11 @@ export default {
       let cursor = elem
       while (cursor) {
         if (!isTextList(cursor)) break
+        const nextIsOrdered = Boolean(
+          cursor.textContent.match(listLikeRegex)[1]
+        )
+
+        if (isOrdered !== nextIsOrdered) break
 
         const li = document.createElement("li")
         listContainer.appendChild(li)
