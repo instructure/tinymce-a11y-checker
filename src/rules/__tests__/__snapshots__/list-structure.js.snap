@@ -3,7 +3,7 @@
 exports[`data returns the proper object 1`] = `
 Object {
   "formatAsList": false,
-  "orderedStart": 1,
+  "orderedStart": "1",
 }
 `;
 
