@@ -48,7 +48,11 @@ const splitParagraphsByBreak = paragraph => {
     child = child.nextSibling
   }
 
-  return appended
+  const nextNode = paragraph.nextSibling
+
+  appended.forEach(newParagraph => {
+    paragraph.parentNode.insertBefore(newParagraph, nextNode)
+  })
 }
 
 export default {
@@ -97,12 +101,7 @@ export default {
 
         if (isOrdered !== nextIsOrdered) break
 
-        const appendAfterCursor = splitParagraphsByBreak(cursor)
-        const nextNode = cursor.nextSibling
-
-        appendAfterCursor.forEach(newParagraph => {
-          cursor.parentNode.insertBefore(newParagraph, nextNode)
-        })
+        splitParagraphsByBreak(cursor)
 
         const li = document.createElement("li")
         listContainer.appendChild(li)
