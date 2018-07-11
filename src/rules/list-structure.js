@@ -30,12 +30,34 @@ const moveContents = (from, to) => {
   while (from.firstChild) to.appendChild(from.firstChild)
 }
 
+const splitParagraphsByBreak = paragraph => {
+  let appended = []
+  let child = paragraph.firstChild
+
+  while (child) {
+    let currentParent = appended[appended.length - 1]
+
+    if (child.tagName === "BR") {
+      appended.push(document.createElement("p"))
+      child = child.nextSibling
+      continue
+    }
+
+    if (currentParent) currentParent.appendChild(child)
+
+    child = child.nextSibling
+  }
+
+  return appended
+}
+
 export default {
   test: function(elem) {
     const isList = isTextList(elem)
     const isFirst = elem.previousElementSibling
       ? !isTextList(elem.previousElementSibling)
       : true
+
     return !(isList && isFirst)
   },
 
@@ -74,6 +96,13 @@ export default {
         )
 
         if (isOrdered !== nextIsOrdered) break
+
+        const appendAfterCursor = splitParagraphsByBreak(cursor)
+        const nextNode = cursor.nextSibling
+
+        appendAfterCursor.forEach(newParagraph => {
+          cursor.parentNode.insertBefore(newParagraph, nextNode)
+        })
 
         const li = document.createElement("li")
         listContainer.appendChild(li)

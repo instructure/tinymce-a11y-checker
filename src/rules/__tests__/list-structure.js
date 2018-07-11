@@ -224,6 +224,22 @@ describe("update", () => {
     expect(body.children[1].tagName).toBe("P")
     expect(body.children[1].textContent).toBe("* List")
   })
+
+  test("Splits paragraphs by <br>", () => {
+    p1.innerHTML = "1. List <br> 2. List"
+    p2.innerHTML = "3. List"
+    p3.innerHTML = "4. List"
+
+    const newA = rule.update(p1, { ...rule.data(p1), formatAsList: true })
+
+    expect(body.firstChild.tagName).toBe("OL")
+    expect(body.firstChild.children.length).toBe(4)
+    expect(
+      [...body.firstChild.children].every(
+        child => child.textContent.trim() === "List"
+      )
+    ).toBeTruthy()
+  })
 })
 
 describe("rootNode", () => {
