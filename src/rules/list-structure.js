@@ -6,8 +6,17 @@ import formatMessage from "../format-message"
  * - list item
  * 1. list item
  * 1) list item
+ * i. list item
+ * a. list Item
  */
-const listLikeRegex = /^\s*(?:[*|-])|(?:(\d+)[\)|\.])\s+/
+
+const orderedChars = `[A-Z,a-z,0-9]`
+const bulletMarkers = ["*", "-"].map(c => "\\" + c).join("|")
+const orderedMarkers = [".", ")"].map(c => "\\" + c).join("|")
+
+const listLikeRegex = new RegExp(
+  `^\\s*(?:[${bulletMarkers}])|(?:(${orderedChars}+)[${orderedMarkers}])\\s+`
+)
 
 const isTextList = elem =>
   elem.tagName === "P" && listLikeRegex.test(elem.textContent)
@@ -68,7 +77,7 @@ export default {
   data: elem => {
     const match = elem.textContent.match(listLikeRegex)
     return {
-      orderedStart: match[1] ? Number(match[1]) : null,
+      orderedStart: match[1] ? match[1] : null,
       formatAsList: false
     }
   },
@@ -88,7 +97,8 @@ export default {
       const isOrdered = Boolean(data.orderedStart)
       const listContainer = document.createElement(isOrdered ? "ol" : "ul")
 
-      if (data.orderedStart && data.orderedStart !== 1) {
+      if (isOrdered) {
+        listContainer.setAttribute("type", data.orderedStart)
         listContainer.setAttribute("start", data.orderedStart)
       }
 
@@ -109,8 +119,9 @@ export default {
         moveContents(cursor, li)
 
         let nextSibling = cursor.nextElementSibling
-        // Remove cleared siblings
-        // Skip if elem because elem is replaced on completion.
+
+        // Remove the now empty siblings
+        // Skip elem because elem is replaced later.
         if (cursor !== elem) cursor.parentNode.removeChild(cursor)
 
         cursor = nextSibling
