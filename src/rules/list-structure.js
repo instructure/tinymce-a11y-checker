@@ -10,12 +10,12 @@ import formatMessage from "../format-message"
  * a. list Item
  */
 
-const orderedChars = `[A-Z,a-z,0-9]`
+const orderedChars = `[A-Z]+|[a-z]+|[0-9]+`
 const bulletMarkers = ["*", "-"].map(c => "\\" + c).join("|")
 const orderedMarkers = [".", ")"].map(c => "\\" + c).join("|")
 
 const listLikeRegex = new RegExp(
-  `^\\s*(?:[${bulletMarkers}])|(?:(${orderedChars}+)[${orderedMarkers}])\\s+`
+  `^\\s*(?:(?:[${bulletMarkers}])|(?:(${orderedChars})[${orderedMarkers}]))\\s+`
 )
 
 const isTextList = elem =>
