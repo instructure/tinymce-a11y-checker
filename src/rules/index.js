@@ -24,5 +24,6 @@ export default [
   headingsSequence,
   imageAltLength,
   paragraphsForHeadings,
+  listStructure,
   validLinks
 ]
