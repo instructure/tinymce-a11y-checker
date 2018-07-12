@@ -10,11 +10,17 @@ exports[`form returns the proper object 1`] = `
 Array [
   Object {
     "dataKey": "href",
-    "label": "Change the URL for this link",
+    "disabledIf": [Function],
+    "label": "Ensure this link is correct.",
+  },
+  Object {
+    "checkbox": true,
+    "dataKey": "ignore",
+    "label": "Ignore this link in the future.",
   },
 ]
 `;
 
-exports[`message returns the proper message 1`] = `"Links should be valid."`;
+exports[`message returns the proper message 1`] = `"This link could not be verified."`;
 
-exports[`why returns the proper why message 1`] = `"Invalid links become broken links which are confusing to all users."`;
+exports[`why returns the proper why message 1`] = `"Links should not be broken."`;

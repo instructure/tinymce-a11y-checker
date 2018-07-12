@@ -1,3 +1,4 @@
+import fetch from "node-fetch"
 import rule from "../valid-links"
 
 let body, a
@@ -7,25 +8,29 @@ beforeEach(() => {
   a = document.createElement("a")
   body.appendChild(a)
   a.textContent = "Link Text"
+  window.fetch = () => Promise.resolve({ ok: true })
 })
 
 describe("test", () => {
-  test("returns true if not A element", () => {
-    expect(rule.test(document.createElement("div"))).toBe(true)
+  test("returns true if not A element", async () => {
+    expect(await rule.test(document.createElement("div"))).toBe(true)
   })
 
-  test("returns true for valid links", () => {
-    a.setAttribute("href", "http://example.com")
-    expect(rule.test(a)).toBe(true)
-    a.setAttribute("href", "mailto:user@example.com")
-    expect(rule.test(a)).toBe(true)
+  test("returns true for valid links", async () => {
+    window.fetch = () => Promise.resolve({ ok: true })
+    a.setAttribute("href", "https://www.instructure.com/")
+    expect(await rule.test(a)).toBe(true)
   })
 
-  test("returns false for invalid links", () => {
+  test("returns false for invalid links", async () => {
+    window.fetch = () => Promise.resolve({ ok: false })
     a.setAttribute("href", "http://something weird")
-    expect(rule.test(a)).toBe(false)
+    expect(await rule.test(a)).toBe(false)
     a.setAttribute("href", "plaintext")
-    expect(rule.test(a)).toBe(false)
+    expect(await rule.test(a)).toBe(false)
+    window.fetch = () => Promise.reject(new Error())
+    a.setAttribute("href", "http://something-valid-but-not-reachable/123")
+    expect(await rule.test(a)).toBe(false)
   })
 })
 
@@ -53,7 +58,15 @@ describe("update", () => {
   test("changes href if it has been changed", () => {
     const href = "bad"
     a.setAttribute("href", href)
-    expect(rule.update(a, { href: "http://good.com" })).toBe(a)
+    rule.update(a, { href: "https://www.instructure.com/" })
+    expect(a.getAttribute("href")).toBe("https://www.instructure.com/")
+  })
+  test("does not change href if href does not change", () => {
+    const href = "http://example.com"
+    a.setAttribute("href", href)
+    expect(
+      rule.update(a, { ignore: true }).getAttribute("data-ignore-a11y-check")
+    ).toBe("true")
   })
 })
 
