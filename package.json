@@ -63,7 +63,6 @@
     "axios": "^0.18.0",
     "format-message": "^6",
     "format-message-generate-id": "^6",
-    "node-fetch": "^2.1.2",
     "prevent-default": "^1.0.0",
     "react": "^0.14.8 || ^15.0.0",
     "react-aria-live": "^1.0.4",
