@@ -1,5 +1,34 @@
 import formatMessage from "../format-message"
 
+/**
+ * How does this Link Checker work?
+ *
+ * This checker takes inspiration from JSONP,
+ * where cross domain requests are still valid
+ * even if they load from a 3rd party site
+ *
+ * 1. An iframe sandbox is created from a data url.
+ * 2. This iframe contains a script tag will create
+ *    a web worker.
+ * 3. The top frame sends the iframe the url in
+ *    question, and the frame creates the worker
+ *    with the url embeded in a `loadScripts` call.
+ * 4. If the script loads, it will fail silently
+ *    - If silent, the worker responds true (good)
+ *    - else the worker responds false (bad link)
+ *    - on timeout, the worker responds false
+ * 5. The top frame waits for the response and
+ *    removes the iframe.
+ *
+ * Note, as of writing, this does not work on
+ * non-chromium browsers. In that case, all links
+ * are flagged as bad with the message:
+ *   "This link could not be verified."
+ *
+ * It would also appear that jsdom (used for tests)
+ * cannot handle this as well.
+ */
+
 const isValidURL = url => {
   try {
     // the URL constructor is more accurate than regex
@@ -15,14 +44,126 @@ const isValidURL = url => {
   }
 }
 
+const send = (type, payload, frame) =>
+  new Promise((resolve, reject) => {
+    const id = Math.random() + Date.now()
+    const message = JSON.stringify({ type, payload, id })
+
+    const handler = event => {
+      let obj = event.data
+      try {
+        if (typeof obj === "string") obj = JSON.parse(event.data)
+      } catch (e) {
+        return
+      }
+
+      const { error, response, id: returnedId } = obj
+      if (returnedId !== id) return
+      window.removeEventListener("message", handler)
+      if (error) return reject(error.href ? error : new Error(error))
+      resolve(response)
+    }
+
+    const win = frame ? frame.contentWindow : window.top
+    window.addEventListener("message", handler)
+    win.postMessage(message, "*")
+  })
+
+const on = (type, fn) => {
+  window.addEventListener("message", event => {
+    let obj = event.data
+    try {
+      if (typeof obj === "string") obj = JSON.parse(event.data)
+    } catch (e) {
+      return
+    }
+
+    const reply = o => {
+      event.source.postMessage(
+        JSON.stringify(Object.assign(o, { id: obj.id })),
+        "*"
+      )
+    }
+
+    if (obj.type === type) {
+      Promise.resolve(fn(obj.payload))
+        .then(response => reply({ response }))
+        .catch(error => {
+          console.error(error)
+          reply({
+            error: error.stack || error.message
+          })
+        })
+      return true
+    }
+  })
+}
+
+const checkUrl = src =>
+  new Promise(resolve => {
+    const workerBody =
+      "data:application/javascript," +
+      encodeURIComponent(`
+function reply(ok){
+  self.postMessage(JSON.stringify({ok: ok}));
+}
+
+try {
+  importScripts("${src}");
+  reply(true);
+} catch(e) {
+  reply(!(e instanceof DOMException));
+}
+`)
+
+    const worker = new Worker(workerBody)
+
+    const timeout = setTimeout(() => {
+      resolve(false)
+      worker.terminate()
+    }, 3000)
+
+    worker.onmessage = e => {
+      const { ok } = JSON.parse(e.data)
+      resolve(ok)
+      worker.terminate()
+      clearTimeout(timeout)
+    }
+  })
+
+const checkUrlWithIframe = src =>
+  new Promise(r => {
+    const body = `data:text/html,${encodeURIComponent(
+      `<script>
+var on = ${on.toString()};
+var checkUrl = ${checkUrl.toString()};
+on('checkUrl', checkUrl);
+</script>`
+    )}`
+
+    const iframe = document.createElement("iframe")
+
+    iframe.setAttribute("sandbox", "allow-scripts")
+    iframe.setAttribute("hidden", "true")
+    iframe.setAttribute("src", body)
+    document.body.appendChild(iframe)
+
+    iframe.onload = () => {
+      send("checkUrl", src, iframe).then(result => {
+        r(result)
+        document.body.removeChild(iframe)
+      })
+    }
+  })
+
 const debouncedFetch = (() => {
   let timeout = null
 
-  return (...args) =>
+  return href =>
     new Promise((resolve, reject) => {
       clearTimeout(timeout)
       timeout = setTimeout(() => {
-        fetch(...args)
+        checkUrlWithIframe(href)
           .then(resolve)
           .catch(reject)
       }, 500)
@@ -38,27 +179,7 @@ export default {
       // If url is invalid
       if (!isValidURL(href)) return resolve(false)
 
-      // If url is valid, do a HEAD request.
-      debouncedFetch(href, { method: "HEAD" })
-        .then(res => resolve(res.ok))
-        .catch(() => resolve(false))
-
-      // This will always work in jest because there
-      // node does not check cross-origin requests,
-      // but this will cause issues in the browser.
-      //
-      // In the browser, the request will still fire
-      // but will will fail for all links that are
-      // not same-origin.
-      //
-      // For cross-origin urls, the user will be
-      // prompted to check the link, or check ignore
-      // if they so choose.
-      //
-      // Workarounds:
-      //  * Create a service to proxy the request
-      //  * Do something crazy with web workers
-      //  * and importScripts (plausible).
+      debouncedFetch(href).then(resolve)
     })
   },
 
