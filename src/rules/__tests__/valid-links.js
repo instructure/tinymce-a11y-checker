@@ -1,4 +1,3 @@
-import fetch from "node-fetch"
 import rule from "../valid-links"
 
 let body, a
