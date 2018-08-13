@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`data returns the proper object 1`] = `
+Object {
+  "href": null,
+}
+`;
+
+exports[`form returns the proper object 1`] = `
+Array [
+  Object {
+    "dataKey": "href",
+    "disabledIf": [Function],
+    "label": "Ensure this link is correct.",
+  },
+  Object {
+    "checkbox": true,
+    "dataKey": "ignore",
+    "label": "Ignore this link in the future.",
+  },
+]
+`;
+
+exports[`message returns the proper message 1`] = `"This link could not be verified."`;
+
+exports[`why returns the proper why message 1`] = `"Links should not be broken."`;
