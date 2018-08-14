@@ -318,6 +318,7 @@ exports[`render matches snapshot with errors 1`] = `
                   textAlign="inherit"
                 >
                   <Button
+                    aria-label="Previous"
                     as="button"
                     buttonRef={[Function]}
                     cursor="pointer"
