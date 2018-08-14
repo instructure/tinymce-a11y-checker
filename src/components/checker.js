@@ -404,6 +404,7 @@ export default class Checker extends React.Component {
                           <Button
                             onClick={() => this.prevError()}
                             margin="0 small 0 0"
+                            aria-label="Previous"
                           >
                             {formatMessage("Prev")}
                           </Button>
