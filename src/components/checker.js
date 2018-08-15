@@ -335,14 +335,14 @@ export default class Checker extends React.Component {
                           show={this.state.showWhyPopover}
                           shouldContainFocus
                           shouldReturnFocus
+                          onDismiss={() => {
+                            this.setState({ showWhyPopover: false })
+                          }}
                         >
                           <PopoverTrigger>
                             <Button
                               variant="icon"
                               icon={IconQuestionLine}
-                              onDismiss={() => {
-                                this.setState({ showWhyPopover: false })
-                              }}
                               onClick={() =>
                                 this.setState({ showWhyPopover: true })
                               }

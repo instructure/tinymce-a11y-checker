@@ -140,7 +140,6 @@ exports[`render matches snapshot with errors 1`] = `
                       icon={[Function]}
                       margin="0"
                       onClick={[Function]}
-                      onDismiss={[Function]}
                       size="medium"
                       type="button"
                       variant="icon"
