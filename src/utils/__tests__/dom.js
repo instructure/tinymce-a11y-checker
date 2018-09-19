@@ -154,15 +154,15 @@ describe("createStyleString", () => {
   })
 })
 
-describe('hasTextNode', () => {
-  test('returns true when the element has a text node child', () => {
+describe("hasTextNode", () => {
+  test("returns true when the element has a text node child", () => {
     const elem = document.createElement("div")
     elem.appendChild(document.createElement("span"))
-    elem.appendChild(document.createTextNode('text me'))
+    elem.appendChild(document.createTextNode("text me"))
     expect(dom.hasTextNode(elem)).toBe(true)
-  });
+  })
 
-  test('returns false when the element has no text node children', () => {
+  test("returns false when the element has no text node children", () => {
     const elem = document.createElement("div")
     elem.appendChild(document.createElement("span"))
     elem.appendChild(document.createElement("span"))

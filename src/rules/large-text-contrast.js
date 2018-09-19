@@ -1,10 +1,7 @@
 import formatMessage from "../format-message"
 import contrast from "wcag-element-contrast"
 import smallTextContrast from "./small-text-contrast"
-import {
-  onlyContainsLink,
-  hasTextNode
-} from "../utils/dom"
+import { onlyContainsLink, hasTextNode } from "../utils/dom"
 
 export default {
   test: (elem, config = {}) => {
