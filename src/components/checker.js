@@ -33,7 +33,7 @@ import rules from "../rules"
 import formatMessage from "../format-message"
 import { clearIndicators } from "../utils/indicate"
 
-const noop = () => {}
+const noop = () => { }
 
 export default class Checker extends React.Component {
   state = {
@@ -49,6 +49,12 @@ export default class Checker extends React.Component {
 
   static defaultProps = {
     additionalRules: []
+  }
+
+  componentDidMount() {
+    this.props.editor.on('Remove', (editor) => {
+      this.setState({ open: false })
+    })
   }
 
   setConfig(config) {
@@ -285,6 +291,10 @@ export default class Checker extends React.Component {
     this.setState({ open: false })
   }
 
+  handleExited() {
+    this.props.editor.focus(false)
+  }
+
   render() {
     const rule = this.errorRule()
     const issueNumberMessage = formatMessage("Issue { num }/{ total }", {
@@ -295,9 +305,11 @@ export default class Checker extends React.Component {
     return (
       <LiveAnnouncer>
         <Tray
+          data-mce-component
           label={formatMessage("Accessibility Checker")}
           open={this.state.open}
           onDismiss={() => this.handleClose()}
+          onExited={() => this.handleExited()}
           placement="end"
           contentRef={e => (this.trayElement = e)}
         >
