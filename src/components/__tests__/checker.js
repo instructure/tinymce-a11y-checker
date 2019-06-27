@@ -76,9 +76,9 @@ describe("check", () => {
       test: async () => {
         return Promise.resolve(false)
       },
-      data: elem => { },
+      data: elem => {},
       form: () => [],
-      update: (elem, data) => { },
+      update: (elem, data) => {},
       message: () => "Async works!",
       why: () => "Because async",
       link: "http://isAsync"
@@ -205,9 +205,7 @@ describe("check", () => {
     })
 
     it("calls focus on the editor on closing the tray", () => {
-      component = mount(
-        <Checker getBody={() => node} editor={fakeEditor} />
-      )
+      component = mount(<Checker getBody={() => node} editor={fakeEditor} />)
       instance = component.instance()
       instance.check() // opens it
       jest.runAllTimers()
