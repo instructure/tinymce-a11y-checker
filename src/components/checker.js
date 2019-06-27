@@ -33,7 +33,7 @@ import rules from "../rules"
 import formatMessage from "../format-message"
 import { clearIndicators } from "../utils/indicate"
 
-const noop = () => {}
+const noop = () => { }
 
 export default class Checker extends React.Component {
   state = {
