@@ -201,7 +201,7 @@ describe("check", () => {
       instance.check() // open it
       jest.runAllTimers()
       expect(fakeEditor.on).toHaveBeenCalled()
-      expect(fakeEditor.on).toHaveBeenCalledWith("Remove")
+      expect(fakeEditor.on.mock.calls[0][0]).toEqual("Remove")
     })
 
     it("calls focus on the editor on closing the tray", () => {
