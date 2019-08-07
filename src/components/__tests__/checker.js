@@ -76,9 +76,9 @@ describe("check", () => {
       test: async () => {
         return Promise.resolve(false)
       },
-      data: elem => {},
+      data: elem => { },
       form: () => [],
-      update: (elem, data) => {},
+      update: (elem, data) => { },
       message: () => "Async works!",
       why: () => "Because async",
       link: "http://isAsync"
@@ -202,17 +202,6 @@ describe("check", () => {
       jest.runAllTimers()
       expect(fakeEditor.on).toHaveBeenCalled()
       expect(fakeEditor.on.mock.calls[0][0]).toEqual("Remove")
-    })
-
-    it("calls focus on the editor on closing the tray", () => {
-      component = mount(<Checker getBody={() => node} editor={fakeEditor} />)
-      instance = component.instance()
-      instance.check() // opens it
-      jest.runAllTimers()
-      const closeButton = document.querySelector("[data-mce-component] button")
-      closeButton.click()
-      jest.runAllTimers()
-      expect(instance.props.editor.focus).toHaveBeenCalled()
     })
   })
 })
