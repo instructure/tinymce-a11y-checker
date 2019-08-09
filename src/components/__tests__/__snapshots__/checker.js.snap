@@ -41,11 +41,17 @@ exports[`render matches snapshot with errors 1`] = `
     </CloseButton>
     <View
       as="div"
+      borderColor="default"
       debug={false}
       display="auto"
+      focusColor="info"
+      focusPosition="offset"
+      focused={false}
       overflowX="visible"
       overflowY="visible"
       padding="x-large large"
+      position="static"
+      shouldAnimateFocus={true}
     >
       <Heading
         as="h2"
@@ -59,10 +65,16 @@ exports[`render matches snapshot with errors 1`] = `
       </Heading>
       <View
         as="div"
+        borderColor="default"
         debug={false}
         display="auto"
+        focusColor="info"
+        focusPosition="offset"
+        focused={false}
         overflowX="visible"
         overflowY="visible"
+        position="static"
+        shouldAnimateFocus={true}
       >
         <LiveMessage
           aria-live="polite"
@@ -74,11 +86,17 @@ exports[`render matches snapshot with errors 1`] = `
         />
         <View
           as="div"
+          borderColor="default"
           debug={false}
           display="auto"
+          focusColor="info"
+          focusPosition="offset"
+          focused={false}
           margin="large 0 medium 0"
           overflowX="visible"
           overflowY="visible"
+          position="static"
+          shouldAnimateFocus={true}
         >
           <Grid
             colSpacing="none"
@@ -101,6 +119,7 @@ exports[`render matches snapshot with errors 1`] = `
                   letterSpacing="normal"
                   size="medium"
                   weight="bold"
+                  wrap="normal"
                 >
                   Issue 1/2
                 </Text>
@@ -172,11 +191,17 @@ exports[`render matches snapshot with errors 1`] = `
                   </PopoverTrigger>
                   <PopoverContent>
                     <View
+                      borderColor="default"
                       debug={false}
                       display="block"
+                      focusColor="info"
+                      focusPosition="offset"
+                      focused={false}
                       overflowX="visible"
                       overflowY="visible"
                       padding="medium"
+                      position="static"
+                      shouldAnimateFocus={true}
                       width="16rem"
                     >
                       <CloseButton
@@ -194,6 +219,7 @@ exports[`render matches snapshot with errors 1`] = `
                         as="span"
                         letterSpacing="normal"
                         size="medium"
+                        wrap="normal"
                       >
                         <p>
                           Why Text
@@ -203,14 +229,13 @@ exports[`render matches snapshot with errors 1`] = `
                             immutable={false}
                             theme={
                               Object {
-                                Symbol(Link__cIcZl): Object {
+                                Symbol(Link__cUhcF): Object {
                                   "textDecoration": "underline",
                                 },
                               }
                             }
                           >
                             <Link
-                              as="button"
                               disabled={false}
                               href="http://some-url"
                               iconPlacement="start"
@@ -237,31 +262,49 @@ exports[`render matches snapshot with errors 1`] = `
             as="div"
             letterSpacing="normal"
             size="medium"
+            wrap="normal"
           >
             Error Message
           </Text>
           <View
             as="div"
+            borderColor="default"
             debug={false}
             display="auto"
+            focusColor="info"
+            focusPosition="offset"
+            focused={false}
             key="select"
             margin="medium 0 0"
             overflowX="visible"
             overflowY="visible"
+            position="static"
+            shouldAnimateFocus={true}
           >
             <Select
+              allowCustom={false}
+              allowEmpty={true}
+              closeOnSelect={true}
+              constrain="window"
               disabled={false}
-              inline={false}
+              editable={false}
+              emptyOption="---"
+              filter={[Function]}
+              formatSelectedOption={[Function]}
+              inputRef={[Function]}
               label="Select Field"
-              layout="stacked"
-              messages={Array []}
-              name="select"
+              loadingText={null}
+              multiple={false}
               onChange={[Function]}
-              required={false}
-              selectRef={[Function]}
+              optionsMaxWidth={null}
+              readOnly={false}
+              selectedOption={
+                Object {
+                  "value": "a",
+                }
+              }
               size="medium"
-              type="text"
-              value="a"
+              visibleOptionsCount={8}
             >
               <option
                 key="a"
@@ -279,12 +322,18 @@ exports[`render matches snapshot with errors 1`] = `
           </View>
           <View
             as="div"
+            borderColor="default"
             debug={false}
             display="auto"
+            focusColor="info"
+            focusPosition="offset"
+            focused={false}
             key="checkbox"
             margin="medium 0 0"
             overflowX="visible"
             overflowY="visible"
+            position="static"
+            shouldAnimateFocus={true}
           >
             <Checkbox
               checked={true}
@@ -292,6 +341,7 @@ exports[`render matches snapshot with errors 1`] = `
               indeterminate={false}
               inline={false}
               label="Select Field"
+              labelPlacement="end"
               name="checkbox"
               onChange={[Function]}
               readOnly={false}
@@ -301,12 +351,18 @@ exports[`render matches snapshot with errors 1`] = `
           </View>
           <View
             as="div"
+            borderColor="default"
             debug={false}
             display="auto"
+            focusColor="info"
+            focusPosition="offset"
+            focused={false}
             key="color"
             margin="medium 0 0"
             overflowX="visible"
             overflowY="visible"
+            position="static"
+            shouldAnimateFocus={true}
           >
             <ColorField
               label="Select Field"
@@ -317,12 +373,18 @@ exports[`render matches snapshot with errors 1`] = `
           </View>
           <View
             as="div"
+            borderColor="default"
             debug={false}
             display="auto"
+            focusColor="info"
+            focusPosition="offset"
+            focused={false}
             key="text"
             margin="medium 0 0"
             overflowX="visible"
             overflowY="visible"
+            position="static"
+            shouldAnimateFocus={true}
           >
             <TextInput
               disabled={true}
@@ -343,12 +405,18 @@ exports[`render matches snapshot with errors 1`] = `
           </View>
           <View
             as="div"
+            borderColor="default"
             debug={false}
             display="auto"
+            focusColor="info"
+            focusPosition="offset"
+            focused={false}
             key="textarea"
             margin="medium 0 0"
             overflowX="visible"
             overflowY="visible"
+            position="static"
+            shouldAnimateFocus={true}
           >
             <TextArea
               autoGrow={true}
@@ -368,11 +436,17 @@ exports[`render matches snapshot with errors 1`] = `
           </View>
           <View
             as="div"
+            borderColor="default"
             debug={false}
             display="auto"
+            focusColor="info"
+            focusPosition="offset"
+            focused={false}
             margin="medium 0"
             overflowX="visible"
             overflowY="visible"
+            position="static"
+            shouldAnimateFocus={true}
           >
             <Grid
               colSpacing="none"
@@ -489,11 +563,17 @@ exports[`render matches snapshot without errors 1`] = `
     </CloseButton>
     <View
       as="div"
+      borderColor="default"
       debug={false}
       display="auto"
+      focusColor="info"
+      focusPosition="offset"
+      focused={false}
       overflowX="visible"
       overflowY="visible"
       padding="x-large large"
+      position="static"
+      shouldAnimateFocus={true}
     >
       <Heading
         as="h2"
@@ -506,15 +586,22 @@ exports[`render matches snapshot without errors 1`] = `
          Accessibility Checker
       </Heading>
       <View
+        borderColor="default"
         debug={false}
         display="auto"
+        focusColor="info"
+        focusPosition="offset"
+        focused={false}
         overflowX="visible"
         overflowY="visible"
+        position="static"
+        shouldAnimateFocus={true}
       >
         <Text
           as="span"
           letterSpacing="normal"
           size="medium"
+          wrap="normal"
         >
           <p>
             No accessibility issues were detected.
