@@ -898,7 +898,7 @@
     babel-plugin-extract-format-message "5 - 6"
     babel-plugin-transform-format-message "5 - 6"
 
-"@instructure/browserslist-config-canvas-lms@latest":
+"@instructure/browserslist-config-canvas-lms@>=2":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@instructure/browserslist-config-canvas-lms/-/browserslist-config-canvas-lms-2.0.0.tgz#0d5ded7b9a4e31f2f0f84b87f975091a1fcb132f"
   integrity sha512-RHQ4VQve4KnOPkCLh5QCWHvljlNZOMcy9hjZUhi5feq17ch7GfIP/ZuXZyvuaCQueuEC7zDQgOVl82t/K0+evw==

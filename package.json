@@ -35,6 +35,7 @@
     "@babel/cli": "^7.0.0",
     "@babel/core": "^7.0.0",
     "@instructure/babel-preset-pretranslated-format-message": "^1.0.0",
+    "@instructure/browserslist-config-canvas-lms": ">=2",
     "@instructure/ui-babel-preset": "6",
     "babel-jest": "^24",
     "babel-loader": "^8",
@@ -55,7 +56,6 @@
     "webpack-dev-server": "^3"
   },
   "dependencies": {
-    "@instructure/browserslist-config-canvas-lms": "latest",
     "@instructure/canvas-theme": "^6.9.0",
     "@instructure/k5uploader": ">=1",
     "@instructure/ui-a11y": "^6.9.0",
