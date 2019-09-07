@@ -29,13 +29,21 @@
   "author": "Brent Burgoyne",
   "license": "MIT",
   "browserslist": [
-    "extends @instructure/browserslist-config-canvas-lms"
+    "we'd like to just say `extends @instructure/browserslist-config-canvas-lms` here but that doesn't work with cypress, see: https://github.com/cypress-io/cypress/issues/2983"
+  ],
+  "browserslist": [
+    "last 2 chrome versions",
+    "last 2 firefox versions",
+    "last 2 edge versions",
+    "last 2 ios versions",
+    "last 2 opera versions",
+    "last 2 safari versions",
+    "last 2 ChromeAndroid versions"
   ],
   "devDependencies": {
     "@babel/cli": "^7.0.0",
     "@babel/core": "^7.0.0",
     "@instructure/babel-preset-pretranslated-format-message": "^1.0.0",
-    "@instructure/browserslist-config-canvas-lms": ">=2",
     "@instructure/ui-babel-preset": "6",
     "babel-jest": "^24",
     "babel-loader": "^8",
