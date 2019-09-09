@@ -2,6 +2,10 @@ language: node_js
 node_js:
   - 12.4
   - lts/*
+addons:
+  apt:
+    packages:
+      - libgconf-2-4
 cache:
   yarn: true
 script:
