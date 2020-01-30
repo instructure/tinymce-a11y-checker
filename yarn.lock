@@ -9605,9 +9605,9 @@ tinymce-light-skin@~1.3.0:
   integrity sha512-NMmaqaZMvHeWcdJvYfNKK3wXkNkdhFjo3xswm7AiQLtU5eQHCL4li4R8+R0BRD8ejHEOG2+Tdf+NzWI4cRsa8w==
 
 tinymce@^4.5.7:
-  version "4.9.4"
-  resolved "https://registry.yarnpkg.com/tinymce/-/tinymce-4.9.4.tgz#67c03d0c5a305b32f677e0680ed7909f3cfd457a"
-  integrity sha512-pht+jAPbVVEVaxGBAGqTwsVsdkI2+c/opuJ44KuD6pBJApMOQbfpGFt+XdxunyPLcxJsa7i28FIWe37W9zqeRA==
+  version "4.9.8"
+  resolved "https://registry.yarnpkg.com/tinymce/-/tinymce-4.9.8.tgz#1f470a9defe3b52845fd51147cb226d44740750e"
+  integrity sha512-587xEh2+otXUNz4FVC8vBogMWpCxhiUIKNYQwOuqao9CHtCVXGHnK2rpEQHE6RsSTLsERpoMsAVte3K6KXoGzQ==
 
 tmp@0.0.33:
   version "0.0.33"
