@@ -38,9 +38,6 @@
   "close_accessibility_checker_29d1c51e": {
     "message": "Zamknij kontrolę dostępności"
   },
-  "close_d634289d": {
-    "message": "Zamknij"
-  },
   "column_e1ae5c64": {
     "message": "Kolumna"
   },
@@ -55,9 +52,6 @@
   },
   "fix_heading_hierarchy_f60884c4": {
     "message": "Przypnij hierarchię nagłówków"
-  },
-  "format_as_a_list_142210c3": {
-    "message": "Formatuj jako listę"
   },
   "header_column_f27433cb": {
     "message": "Kolumna nagłówka"
@@ -92,41 +86,11 @@
   "keyboards_navigate_to_links_using_the_tab_key_two__5fab8c82": {
     "message": "Klawiatury pozwalają przejść do łączy za pomocą klawisza Tab. Dwa sąsiednie łącza prowadzącego do tej samej lokalizacji mogą wprowadzać użytkowników klawiatury w błąd."
   },
-  "learn_more_about_adjacent_links_2cb9762c": {
-    "message": "Uzyskaj więcej informacji na temat sąsiadujących linków"
-  },
-  "learn_more_about_color_contrast_c019dfb9": {
-    "message": "Uzyskaj więcej informacji na temat kontrastu barw"
-  },
-  "learn_more_about_organizing_page_headings_8a7caa2e": {
-    "message": "Uzyskaj więcej informacji na temat organizacji nagłówków na stronie"
-  },
-  "learn_more_about_table_headers_5f5ee13": {
-    "message": "Uzyskaj więcej informacji na temat nagłówków tabeli"
-  },
-  "learn_more_about_using_alt_text_for_images_5698df9a": {
-    "message": "Uzyskaj więcej informacji na temat alternatywnego tekstu dla obrazów"
-  },
-  "learn_more_about_using_captions_with_tables_36fe496f": {
-    "message": "Uzyskaj więcej informacji na temat napisów i tabel"
-  },
-  "learn_more_about_using_filenames_as_alt_text_264286af": {
-    "message": "Uzyskaj więcej informacji na temat nazw plików jako alternatywnego tekstu"
-  },
-  "learn_more_about_using_lists_4e6eb860": {
-    "message": "Uzyskaj więcej informacji na temat korzystania z list"
-  },
-  "learn_more_about_using_scope_attributes_with_table_20df49aa": {
-    "message": "Uzyskaj więcej informacji na temat atrybutów zakresu i tabel"
-  },
   "leave_as_is_4facfe55": {
     "message": "Pozostaw jako"
   },
   "link_with_text_starting_with_start_b3fcbe71": {
     "message": "Powiąż z tekstem, który się zaczyna od słów { start }"
-  },
-  "lists_should_be_formatted_as_lists_f862de8d": {
-    "message": "Listy należy sformatować jako listy."
   },
   "merge_links_2478df96": {
     "message": "Scal łącza"
@@ -203,17 +167,11 @@
   "tables_should_include_at_least_one_header_48779eac": {
     "message": "Tabele powinny zawierać co najmniej jeden nagłówek."
   },
-  "text_is_difficult_to_read_without_sufficient_contr_69e62bd6": {
-    "message": "Tekst jest trudny do czytania bez wystarczającego kontrastu między tekstem i tłem, szczególnie w przypadku osób ze słabym wzrokiem."
-  },
   "text_larger_than_18pt_or_bold_14pt_should_display__5c364db6": {
     "message": "Tekst o czcionce powyżej 18 pt (lub pogrubionej 14 pt) powinien korzystać ze współczynnika kontrastu co najmniej 3:1."
   },
   "text_smaller_than_18pt_or_bold_14pt_should_display_aaffb22b": {
     "message": "Tekst o czcionce poniżej 18 pt (lub pogrubionej 14 pt) powinien korzystać ze współczynnika kontrastu co najmniej 4,5:1."
-  },
-  "when_markup_is_used_that_visually_formats_items_as_f941fc1b": {
-    "message": "Gdy używane jest oznaczenie, które wizualnie formatuje elementy jako listę, ale nie wskazuje na relacje w liście, użytkownicy mogą mieć problem z nawigowaniem po informacjach."
   },
   "why_523b3d8c": {
     "message": "Dlaczego"

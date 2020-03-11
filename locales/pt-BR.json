@@ -38,9 +38,6 @@
   "close_accessibility_checker_29d1c51e": {
     "message": "Fechar Verificador de acessibilidade"
   },
-  "close_d634289d": {
-    "message": "Fechar"
-  },
   "column_e1ae5c64": {
     "message": "Coluna"
   },
@@ -55,9 +52,6 @@
   },
   "fix_heading_hierarchy_f60884c4": {
     "message": "Corrigir hierarquia de títulos"
-  },
-  "format_as_a_list_142210c3": {
-    "message": "Formatar como uma lista"
   },
   "header_column_f27433cb": {
     "message": "Coluna do cabeçalho"
@@ -92,41 +86,11 @@
   "keyboards_navigate_to_links_using_the_tab_key_two__5fab8c82": {
     "message": "Teclados navegam para links usando a tecla Tab. Dois links adjacentes que direcionam para o mesmo destino podem ser confusos para usuários de teclado."
   },
-  "learn_more_about_adjacent_links_2cb9762c": {
-    "message": "Saiba mais sobre links adjacentes"
-  },
-  "learn_more_about_color_contrast_c019dfb9": {
-    "message": "Saiba mais sobre o contraste de cores"
-  },
-  "learn_more_about_organizing_page_headings_8a7caa2e": {
-    "message": "Saiba mais sobre a organização de cabeçalhos da página"
-  },
-  "learn_more_about_table_headers_5f5ee13": {
-    "message": "Saiba mais sobre cabeçalhos de tabelas"
-  },
-  "learn_more_about_using_alt_text_for_images_5698df9a": {
-    "message": "Saiba mais sobre o uso de texto alternativo para imagens"
-  },
-  "learn_more_about_using_captions_with_tables_36fe496f": {
-    "message": "Saiba mais sobre o uso de legendas com tabelas"
-  },
-  "learn_more_about_using_filenames_as_alt_text_264286af": {
-    "message": "Saiba mais sobre o uso de nomes de arquivos como texto alternativo"
-  },
-  "learn_more_about_using_lists_4e6eb860": {
-    "message": "Saiba mais sobre o uso de listas"
-  },
-  "learn_more_about_using_scope_attributes_with_table_20df49aa": {
-    "message": "Saiba mais sobre o uso de atributos de escopo com tabelas"
-  },
   "leave_as_is_4facfe55": {
     "message": "Deixar como está"
   },
   "link_with_text_starting_with_start_b3fcbe71": {
     "message": "Link com texto começando com { start }"
-  },
-  "lists_should_be_formatted_as_lists_f862de8d": {
-    "message": "Listas devem ser formatadas como listas."
   },
   "merge_links_2478df96": {
     "message": "Mesclar links"
@@ -203,17 +167,11 @@
   "tables_should_include_at_least_one_header_48779eac": {
     "message": "Tabelas devem incluir pelo menos um cabeçalho."
   },
-  "text_is_difficult_to_read_without_sufficient_contr_69e62bd6": {
-    "message": "Texto é difícil de ler sem contraste suficiente entre o texto e o plano de fundo, especialmente para aqueles com pouca visão."
-  },
   "text_larger_than_18pt_or_bold_14pt_should_display__5c364db6": {
     "message": "Texto maior do que 18pt (ou negrito 14pt) deve exibir uma razão mínima de contraste de 3:1."
   },
   "text_smaller_than_18pt_or_bold_14pt_should_display_aaffb22b": {
     "message": "Texto menor do que 18pt (ou negrito 14pt) deve exibir uma razão mínima de contraste de 4.5:1."
-  },
-  "when_markup_is_used_that_visually_formats_items_as_f941fc1b": {
-    "message": "Quando marcação é usada, que visualmente formata itens como uma lista, mas não indica o relacionamento da lista, os usuários podem ter dificuldade em navegar pelas informações."
   },
   "why_523b3d8c": {
     "message": "Por que"

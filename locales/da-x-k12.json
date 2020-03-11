@@ -38,9 +38,6 @@
   "close_accessibility_checker_29d1c51e": {
     "message": "Luk tilgægelighedskontrol"
   },
-  "close_d634289d": {
-    "message": "Luk"
-  },
   "column_e1ae5c64": {
     "message": "Kolonne"
   },
@@ -55,9 +52,6 @@
   },
   "fix_heading_hierarchy_f60884c4": {
     "message": "Ret overskriftshierarki"
-  },
-  "format_as_a_list_142210c3": {
-    "message": "Listeformat"
   },
   "header_column_f27433cb": {
     "message": "Overskriftskolonne"
@@ -92,41 +86,11 @@
   "keyboards_navigate_to_links_using_the_tab_key_two__5fab8c82": {
     "message": "Tastaturer navigerer til links ved hjælp af Tab-tasten. To tilstødende links, der fører til samme destination, kan være forvirrende for tastaturbrugere."
   },
-  "learn_more_about_adjacent_links_2cb9762c": {
-    "message": "Få mere at vide om tilstødende links"
-  },
-  "learn_more_about_color_contrast_c019dfb9": {
-    "message": "Få mere at vide om farvekontrast"
-  },
-  "learn_more_about_organizing_page_headings_8a7caa2e": {
-    "message": "Få mere at vide om at organisere sideoverskrifter"
-  },
-  "learn_more_about_table_headers_5f5ee13": {
-    "message": "Få mere at vide om tabeloverskrifter"
-  },
-  "learn_more_about_using_alt_text_for_images_5698df9a": {
-    "message": "Få mere at vide om at bruge alt-tekst til billeder"
-  },
-  "learn_more_about_using_captions_with_tables_36fe496f": {
-    "message": "Få mere at vide om brug af billedtekster med tabeller"
-  },
-  "learn_more_about_using_filenames_as_alt_text_264286af": {
-    "message": "Få mere at vide om at bruge filnavne som alt-tekst"
-  },
-  "learn_more_about_using_lists_4e6eb860": {
-    "message": "Få mere at vide om at bruge lister"
-  },
-  "learn_more_about_using_scope_attributes_with_table_20df49aa": {
-    "message": "Få mere at vide om at bruge anvendelsesområde-attributter med tabeller"
-  },
   "leave_as_is_4facfe55": {
     "message": "Lad det være, som det er"
   },
   "link_with_text_starting_with_start_b3fcbe71": {
     "message": "Link med tekst, der begynder med { start }"
-  },
-  "lists_should_be_formatted_as_lists_f862de8d": {
-    "message": "Lister skal have listeformat."
   },
   "merge_links_2478df96": {
     "message": "Sammenlæg links"
@@ -203,17 +167,11 @@
   "tables_should_include_at_least_one_header_48779eac": {
     "message": "Tabeller skal indeholde mindst et overskrift."
   },
-  "text_is_difficult_to_read_without_sufficient_contr_69e62bd6": {
-    "message": "Tekst er vanskelig at læse uden tilstrækkelig kontrast mellem tekst og baggrund, især for personer med dårligt syn."
-  },
   "text_larger_than_18pt_or_bold_14pt_should_display__5c364db6": {
     "message": "Tekst større end 18pt (eller fed 14pt) skal have et kontrastforhold på mindst 3:1."
   },
   "text_smaller_than_18pt_or_bold_14pt_should_display_aaffb22b": {
     "message": "Tekst mindre end 18pt (eller fed 14pt) skal have et kontrastforhold på mindst 4,5:1."
-  },
-  "when_markup_is_used_that_visually_formats_items_as_f941fc1b": {
-    "message": "Når der anvendes fremhævelse, der visuelt formaterer elementer i listeform, men som ikke angiver listeforholdet, kan brugere have svært ved at navigere gennem oplysningerne."
   },
   "why_523b3d8c": {
     "message": "Hvorfor"

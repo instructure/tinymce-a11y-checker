@@ -38,9 +38,6 @@
   "close_accessibility_checker_29d1c51e": {
     "message": "Cau''r Gwiriwr Hygyrchedd"
   },
-  "close_d634289d": {
-    "message": "Cau"
-  },
   "column_e1ae5c64": {
     "message": "Colofn"
   },
@@ -55,9 +52,6 @@
   },
   "fix_heading_hierarchy_f60884c4": {
     "message": "Pennu hierarchaeth penawdau"
-  },
-  "format_as_a_list_142210c3": {
-    "message": "Fformatio ar ffurf rhestr"
   },
   "header_column_f27433cb": {
     "message": "Colofn y pennawd"
@@ -92,41 +86,11 @@
   "keyboards_navigate_to_links_using_the_tab_key_two__5fab8c82": {
     "message": "Mae bysellfyrddau’n symud i ddolenni drwy ddefnyddio’r fysell ‘Tab’. Gall dwy ddolen gyfagos â''r un gyrchfan fod yn ddryslyd i ddefnyddwyr bysellfyrddau."
   },
-  "learn_more_about_adjacent_links_2cb9762c": {
-    "message": "Dysgu mwy am ddolenni cyfagos"
-  },
-  "learn_more_about_color_contrast_c019dfb9": {
-    "message": "Dysgu mwy am gyferbynnedd lliw"
-  },
-  "learn_more_about_organizing_page_headings_8a7caa2e": {
-    "message": "Dysgu mwy am drefnu penawdau tudalennau"
-  },
-  "learn_more_about_table_headers_5f5ee13": {
-    "message": "Dysgu mwy am benawdau tablau"
-  },
-  "learn_more_about_using_alt_text_for_images_5698df9a": {
-    "message": "Dysgu mwy am ddefnyddio testun amgen ar gyfer delweddau"
-  },
-  "learn_more_about_using_captions_with_tables_36fe496f": {
-    "message": "Dysgu mwy am ddefnyddio capsiynau gyda thablau"
-  },
-  "learn_more_about_using_filenames_as_alt_text_264286af": {
-    "message": "Dysgu mwy am ddefnyddio enwau ffeiliau fel testun amgen"
-  },
-  "learn_more_about_using_lists_4e6eb860": {
-    "message": "Dysgu mwy am ddefnyddio rhestrau"
-  },
-  "learn_more_about_using_scope_attributes_with_table_20df49aa": {
-    "message": "Dysgu mwy am ddefnyddio priodoleddau cwmpas gyda thablau"
-  },
   "leave_as_is_4facfe55": {
     "message": "Gadael fel y mae"
   },
   "link_with_text_starting_with_start_b3fcbe71": {
     "message": "Dolen â thestun yn dechrau gyda { start }"
-  },
-  "lists_should_be_formatted_as_lists_f862de8d": {
-    "message": "Dylai rhestrau gael eu fformatio ar ffurf rhestrau."
   },
   "merge_links_2478df96": {
     "message": "Cyfuno dolenni"
@@ -203,17 +167,11 @@
   "tables_should_include_at_least_one_header_48779eac": {
     "message": "Dylai tablau gynnwys o leiaf un pennawd."
   },
-  "text_is_difficult_to_read_without_sufficient_contr_69e62bd6": {
-    "message": "Mae’r testun yn anodd ei ddarllen heb gyferbynnedd digonol rhwng y testun a’r cefndir, yn enwedig i bobl sydd â golwg sâl."
-  },
   "text_larger_than_18pt_or_bold_14pt_should_display__5c364db6": {
     "message": "Dylai testun mwy na 18pt (neu 14pt trwm) fod â chyferbyniad 3:1 o leiaf."
   },
   "text_smaller_than_18pt_or_bold_14pt_should_display_aaffb22b": {
     "message": "Dylai testun llai na 18pt (neu 14pt trwm) fod â chyferbyniad 4.5:1 o leiaf."
-  },
-  "when_markup_is_used_that_visually_formats_items_as_f941fc1b": {
-    "message": "Pan fydd marcio’n cael ei ddefnyddio, sy’n fformatio eitemau’n weledol ar ffurf rhestr ond sydd ddim yn nodi perthynas y rhestr, mae’n bosib y bydd defnyddwyr yn cael trafferth i ddod o hyd i’r wybodaeth."
   },
   "why_523b3d8c": {
     "message": "Pam"

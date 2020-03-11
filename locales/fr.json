@@ -38,9 +38,6 @@
   "close_accessibility_checker_29d1c51e": {
     "message": "Fermer le vérificateur d’accessibilité"
   },
-  "close_d634289d": {
-    "message": "Fermer"
-  },
   "column_e1ae5c64": {
     "message": "Colonne"
   },
@@ -55,9 +52,6 @@
   },
   "fix_heading_hierarchy_f60884c4": {
     "message": "Corriger la hiérarchie des en-têtes"
-  },
-  "format_as_a_list_142210c3": {
-    "message": "Présenter sous forme de liste"
   },
   "header_column_f27433cb": {
     "message": "Colonne d’en-tête"
@@ -92,41 +86,11 @@
   "keyboards_navigate_to_links_using_the_tab_key_two__5fab8c82": {
     "message": "Au clavier, on navigue parmi les liens à l’aide de la touche tabulation. Lorsque deux liens adjacents renvoient à la même destination, cela peut porter à confusion pour les utilisateurs au clavier."
   },
-  "learn_more_about_adjacent_links_2cb9762c": {
-    "message": "Apprenez-en davantage sur les liens adjacents"
-  },
-  "learn_more_about_color_contrast_c019dfb9": {
-    "message": "Apprenez-en davantage sur le contraste couleur"
-  },
-  "learn_more_about_organizing_page_headings_8a7caa2e": {
-    "message": "Apprenez-en davantage sur la façon d’organiser les en-têtes de page"
-  },
-  "learn_more_about_table_headers_5f5ee13": {
-    "message": "Apprenez-en davantage sur les en-tête de tableaux"
-  },
-  "learn_more_about_using_alt_text_for_images_5698df9a": {
-    "message": "Apprenez-en davantage sur l’utilisation de texte dans les images"
-  },
-  "learn_more_about_using_captions_with_tables_36fe496f": {
-    "message": "Apprenez-en davantage sur l’utilisation de légendes dans les tableaux"
-  },
-  "learn_more_about_using_filenames_as_alt_text_264286af": {
-    "message": "Apprenez-en davantage sur l’utilisation de noms de fichiers comme texte alternatif"
-  },
-  "learn_more_about_using_lists_4e6eb860": {
-    "message": "Apprenez-en davantage sur l’utilisation des listes"
-  },
-  "learn_more_about_using_scope_attributes_with_table_20df49aa": {
-    "message": "Apprenez-en davantage sur l’utilisation de l''attribut Scope dans les tableaux"
-  },
   "leave_as_is_4facfe55": {
     "message": "Laisser en l’état"
   },
   "link_with_text_starting_with_start_b3fcbe71": {
     "message": "Lien contenant du texte commençant par { start }"
-  },
-  "lists_should_be_formatted_as_lists_f862de8d": {
-    "message": "Les listes doivent être présentées sous forme de listes."
   },
   "merge_links_2478df96": {
     "message": "Fusionner les liens"
@@ -203,17 +167,11 @@
   "tables_should_include_at_least_one_header_48779eac": {
     "message": "Les tableaux devraient comprendre au moins un en-tête."
   },
-  "text_is_difficult_to_read_without_sufficient_contr_69e62bd6": {
-    "message": "Le texte est difficile à lire sans un contraste suffisant entre le texte et l''arrière-plan, surtout pour ceux qui ont une vue faible."
-  },
   "text_larger_than_18pt_or_bold_14pt_should_display__5c364db6": {
     "message": "Les textes d’une taille supérieure à 18pt (ou 14pt en gras) devraient respecter un ratio de contraste d’au moins 3:1."
   },
   "text_smaller_than_18pt_or_bold_14pt_should_display_aaffb22b": {
     "message": "Les textes de moins de 18pt (ou 14pt en gras) devraient respecter un ratio de contraste d’au moins 4,5:1."
-  },
-  "when_markup_is_used_that_visually_formats_items_as_f941fc1b": {
-    "message": "Lorsqu''on utilise des balises qui formatent visuellement les éléments sous forme de liste, mais qui n''indiquent pas la relation entre les listes, les utilisateurs peuvent avoir de la difficulté à naviguer dans l''information."
   },
   "why_523b3d8c": {
     "message": "Pourquoi"
