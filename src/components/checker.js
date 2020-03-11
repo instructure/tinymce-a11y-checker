@@ -51,6 +51,12 @@ export default class Checker extends React.Component {
     additionalRules: []
   }
 
+  componentDidMount() {
+    this.props.editor.on("Remove", editor => {
+      this.setState({ open: false })
+    })
+  }
+
   setConfig(config) {
     this.setState({ config })
   }
@@ -295,6 +301,7 @@ export default class Checker extends React.Component {
     return (
       <LiveAnnouncer>
         <Tray
+          data-mce-component
           label={formatMessage("Accessibility Checker")}
           open={this.state.open}
           onDismiss={() => this.handleClose()}
