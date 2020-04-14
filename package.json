@@ -47,7 +47,7 @@
     "@instructure/ui-babel-preset": "6",
     "babel-jest": "^24",
     "babel-loader": "^8",
-    "canvas-rce": "^5.0.1",
+    "canvas-rce": "^5.0.3",
     "cypress": "^3",
     "enzyme": "^3",
     "enzyme-adapter-react-16": "^1.0.0",
@@ -66,7 +66,6 @@
   "dependencies": {
     "@instructure/browserslist-config-canvas-lms": ">=2",
     "@instructure/canvas-theme": "^6.9.0",
-    "@instructure/k5uploader": ">=1",
     "@instructure/ui-a11y": "^6.9.0",
     "@instructure/ui-buttons": "6",
     "@instructure/ui-elements": "6",
