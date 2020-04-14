@@ -1,6 +1,6 @@
 {
   "name": "tinymce-a11y-checker",
-  "version": "2.3.0",
+  "version": "3.0.0-rc2",
   "description": "An accessibility checker plugin for TinyMCE.",
   "main": "lib/plugin.js",
   "module": "lib/modules/plugin.js",
@@ -38,8 +38,7 @@
     "last 2 ios versions",
     "last 2 opera versions",
     "last 2 safari versions",
-    "last 2 ChromeAndroid versions",
-    "ie >= 11"
+    "last 2 ChromeAndroid versions"
   ],
   "devDependencies": {
     "@babel/cli": "^7.0.0",
@@ -65,6 +64,7 @@
     "webpack-dev-server": "^3"
   },
   "dependencies": {
+    "@instructure/browserslist-config-canvas-lms": ">=2",
     "@instructure/canvas-theme": "^6.9.0",
     "@instructure/k5uploader": ">=1",
     "@instructure/ui-a11y": "^6.9.0",

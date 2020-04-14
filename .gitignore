@@ -1,4 +1,5 @@
-node_modules
-lib
-src/translations.json
-coverage
+/node_modules
+/lib
+/src/translations.json
+/coverage
+/cypress

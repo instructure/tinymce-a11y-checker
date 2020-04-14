@@ -2,15 +2,8 @@ language: node_js
 node_js:
   - 12.4
   - lts/*
-addons:
-  apt:
-    packages:
-      # Ubuntu 16+ does not install this dependency by default, so we need to install it ourselves
-      - libgconf-2-4
 cache:
-  directories:
-    # we also need to cache folder with Cypress binary
-    - ~/.cache
+  yarn: true
 script:
   - npm run test:coverage
   - npm run cypress:ci
