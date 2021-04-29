@@ -1,4 +1,4 @@
-import { renderIntoDiv } from "@instructure/canvas-rce"
+import { renderIntoDiv } from "canvas-rce"
 import canvasTheme from "@instructure/canvas-theme"
 
 import { getInstance, setLocale } from "./plugin"
