@@ -8139,9 +8139,10 @@ joi@^17.3.0:
     "@sideway/formula" "^3.0.0"
     "@sideway/pinpoint" "^2.0.0"
 
-"jquery@git+https://github.com/ryankshaw/jquery.git#1.7.2-with-AMD-and-CommonJS":
+"jquery@https://github.com/ryankshaw/jquery.git#1.7.2-with-AMD-and-CommonJS":
   version "1.7.2"
-  resolved "git+https://github.com/ryankshaw/jquery.git#3a48a84c713291b790a2556d9ba036ec4d53c52f"
+  uid "3a48a84c713291b790a2556d9ba036ec4d53c52f"
+  resolved "https://github.com/ryankshaw/jquery.git#3a48a84c713291b790a2556d9ba036ec4d53c52f"
 
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"
@@ -11176,9 +11177,10 @@ screenfull@^3.3.2:
   resolved "https://registry.yarnpkg.com/screenfull/-/screenfull-3.3.3.tgz#8cf7e706aceac2e75131aadcb81b622acfe11d39"
   integrity sha512-DzYUuXr+OV2BDvYXaYzlYgJd4WXZZ2CW5NFC7Kw6TUCpzXJAx4MwlVD6CH+Mu6fi8rfAQIQfqdFZ4jtDsEkWig==
 
-"scroll-into-view@git+https://github.com/bkirkby/scroll-into-view.git#588b0ced98eeecf84e6fb2074aa076e80b7cffab":
+"scroll-into-view@https://github.com/bkirkby/scroll-into-view.git#588b0ced98eeecf84e6fb2074aa076e80b7cffab":
   version "1.7.4"
-  resolved "git+https://github.com/bkirkby/scroll-into-view.git#588b0ced98eeecf84e6fb2074aa076e80b7cffab"
+  uid "588b0ced98eeecf84e6fb2074aa076e80b7cffab"
+  resolved "https://github.com/bkirkby/scroll-into-view.git#588b0ced98eeecf84e6fb2074aa076e80b7cffab"
   dependencies:
     raf "^3.1.0"
 
