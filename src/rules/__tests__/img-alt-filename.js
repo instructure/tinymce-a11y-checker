@@ -68,7 +68,9 @@ describe("update", () => {
   test("changes alt text if not decorative", () => {
     const text = "this is my text"
     el.setAttribute("alt", "thisismy.txt")
-    expect(rule.update(el, { alt: text, decorative: false }).getAttribute("alt")).toBe(text)
+    expect(
+      rule.update(el, { alt: text, decorative: false }).getAttribute("alt")
+    ).toBe(text)
   })
 
   test("removes data-decorative if not decorative", () => {
