@@ -65,6 +65,23 @@ describe("update", () => {
     expect(rule.update(el, {})).toBe(el)
   })
 
+  test("sets alt text to empty and role to 'presentation' if decorative", () => {
+    rule.update(el, { decorative: true })
+    expect(el.getAttribute("alt")).toBe("")
+    expect(el.hasAttribute("data-decorative")).toBeTruthy()
+    expect(el.getAttribute("role")).toBe("presentation")
+  })
+
+  test("sets alt text and removes role if not decorative", () => {
+    el.setAttribute("alt", "")
+    el.setAttribute("data-decorative", "")
+    el.setAttribute("role", "presentation")
+    rule.update(el, { decorative: false, alt: "some text" })
+    expect(el.getAttribute("alt")).toBe("some text")
+    expect(el.hasAttribute("data-decorative")).toBeFalsy()
+    expect(el.hasAttribute("role")).toBeFalsy()
+  })
+
   test("changes alt text if not decorative", () => {
     const text = "this is my text"
     el.setAttribute("alt", "thisismy.txt")
