@@ -277,49 +277,45 @@ exports[`render matches snapshot with errors 1`] = `
             shouldAnimateFocus={true}
             withVisualDebug={false}
           >
-            <Select
+            <SimpleSelect
               constrain="window"
               disabled={false}
               inputRef={[Function]}
-              inputValue=""
               isInline={false}
               isRequired={false}
-              isShowingOptions={false}
               listRef={[Function]}
               onBlur={[Function]}
+              onChange={[Function]}
               onFocus={[Function]}
-              onRequestHideOptions={[Function]}
-              onRequestHighlightOption={[Function]}
-              onRequestSelectOption={[Function]}
-              onRequestShowOptions={[Function]}
+              onHideOptions={[Function]}
+              onShowOptions={[Function]}
               placeholder={null}
               placement="bottom stretch"
               renderAfterInput={null}
               renderBeforeInput={null}
+              renderEmptyOption="---"
               renderLabel={[Function]}
-              shouldNotWrap={false}
               size="medium"
+              value="a"
               visibleOptionsCount={8}
             >
               <Option
                 id="a"
                 isDisabled={false}
-                isHighlighted={false}
-                isSelected={true}
                 key="a"
+                value="a"
               >
                 A
               </Option>
               <Option
                 id="b"
                 isDisabled={false}
-                isHighlighted={false}
-                isSelected={false}
                 key="b"
+                value="b"
               >
                 B
               </Option>
-            </Select>
+            </SimpleSelect>
           </View>
           <View
             as="div"

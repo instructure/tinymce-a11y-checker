@@ -15,7 +15,7 @@ import { Text } from "@instructure/ui-text"
 import { Checkbox } from "@instructure/ui-checkbox"
 import { TextInput } from "@instructure/ui-text-input"
 import { TextArea } from "@instructure/ui-text-area"
-import { Select } from "@instructure/ui-select"
+import { SimpleSelect } from "@instructure/ui-simple-select"
 import { IconQuestionLine } from "@instructure/ui-icons"
 import { ApplyTheme } from "@instructure/ui-themeable"
 import ColorField from "./color-field"
@@ -472,9 +472,9 @@ export default class Checker extends React.Component {
     switch (true) {
       case !!f.options:
         return (
-          <Select
+          <SimpleSelect
             disabled={disabled}
-            onRequestSelectOption={option => {
+            onChange={(e, option) => {
               this.updateFormState({
                 target: {
                   name: f.dataKey,
@@ -482,18 +482,15 @@ export default class Checker extends React.Component {
                 }
               })
             }}
+            value={this.state.formState[f.dataKey]}
             renderLabel={() => f.label}
           >
             {f.options.map(o => (
-              <Select.Option
-                key={o[0]}
-                id={o[0]}
-                isSelected={this.state.formState[f.dataKey] === o[0]}
-              >
+              <SimpleSelect.Option key={o[0]} id={o[0]} value={o[0]}>
                 {o[1]}
-              </Select.Option>
+              </SimpleSelect.Option>
             ))}
-          </Select>
+          </SimpleSelect>
         )
       case f.checkbox:
         return (

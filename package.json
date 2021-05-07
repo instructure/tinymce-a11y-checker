@@ -69,7 +69,7 @@
     "@instructure/ui-icons": "^7.6.0",
     "@instructure/ui-link": "^7.6.0",
     "@instructure/ui-popover": "^7.6.0",
-    "@instructure/ui-select": "^7.6.0",
+    "@instructure/ui-simple-select": "^7.6.0",
     "@instructure/ui-spinner": "^7.6.0",
     "@instructure/ui-text": "^7.6.0",
     "@instructure/ui-text-area": "^7.6.0",

@@ -2672,6 +2672,23 @@
     keycode "^2"
     prop-types "^15"
 
+"@instructure/ui-simple-select@^7.6.0":
+  version "7.6.0"
+  resolved "https://registry.yarnpkg.com/@instructure/ui-simple-select/-/ui-simple-select-7.6.0.tgz#8d927929c6cb279ac595764e10579a9e9e3f339c"
+  integrity sha512-j4DxoI6dz5sx/h624ndUJZHaznbU9ZlTYDUuOUs4bCyuahVKrsRkys9zvqsbmmiCY/Bhn5OUg9UDmj1q4qLtrw==
+  dependencies:
+    "@babel/runtime" "^7.9.2"
+    "@instructure/console" "^7.6.0"
+    "@instructure/ui-form-field" "^7.6.0"
+    "@instructure/ui-position" "^7.6.0"
+    "@instructure/ui-prop-types" "^7.6.0"
+    "@instructure/ui-react-utils" "^7.6.0"
+    "@instructure/ui-select" "^7.6.0"
+    "@instructure/ui-testable" "^7.6.0"
+    "@instructure/ui-themeable" "^7.6.0"
+    "@instructure/uid" "^7.6.0"
+    prop-types "^15"
+
 "@instructure/ui-spinner@^6.21.0", "@instructure/ui-spinner@^6.27.0":
   version "6.27.0"
   resolved "https://registry.yarnpkg.com/@instructure/ui-spinner/-/ui-spinner-6.27.0.tgz#8845a5b8a9bf55035c66fc59ad88ba0be0fbc31f"
