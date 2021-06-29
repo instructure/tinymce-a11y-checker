@@ -38,9 +38,6 @@
   "close_accessibility_checker_29d1c51e": {
     "message": "Loka Accessibility CheckerAthugun á aðgangi"
   },
-  "close_d634289d": {
-    "message": "Loka"
-  },
   "column_e1ae5c64": {
     "message": "Dálkur"
   },
@@ -55,9 +52,6 @@
   },
   "fix_heading_hierarchy_f60884c4": {
     "message": "Lagfæra stigveldi hauss"
-  },
-  "format_as_a_list_142210c3": {
-    "message": "Sníða sem lista"
   },
   "header_column_f27433cb": {
     "message": "Dálkur fyrir haus"
@@ -92,41 +86,11 @@
   "keyboards_navigate_to_links_using_the_tab_key_two__5fab8c82": {
     "message": "Nota dálklykil til að fara á tengla. Tveir samliggjandi tenglar sem vísa á sama ákvörðunarstað geta valdið ruglingi hjá þeim sem nota lyklaborð."
   },
-  "learn_more_about_adjacent_links_2cb9762c": {
-    "message": "Fá að vita meira um samliggjandi tengla"
-  },
-  "learn_more_about_color_contrast_c019dfb9": {
-    "message": "Fá að vita meira um litaandstæður"
-  },
-  "learn_more_about_organizing_page_headings_8a7caa2e": {
-    "message": "Fá að vita meira um skipulag á síðuhausum"
-  },
-  "learn_more_about_table_headers_5f5ee13": {
-    "message": "Fá að vita meira um töfluhausa"
-  },
-  "learn_more_about_using_alt_text_for_images_5698df9a": {
-    "message": "Fá að vita meira um notkun baktexta fyrir myndir"
-  },
-  "learn_more_about_using_captions_with_tables_36fe496f": {
-    "message": "Fá að vita meira um notkun skýringartexta með töflum"
-  },
-  "learn_more_about_using_filenames_as_alt_text_264286af": {
-    "message": "Fá að vita meira um notkun skráaheita sem baktexta"
-  },
-  "learn_more_about_using_lists_4e6eb860": {
-    "message": "Fá að vita meira um notkun lista"
-  },
-  "learn_more_about_using_scope_attributes_with_table_20df49aa": {
-    "message": "Fá að vita meira um notkun umfangseiginda með töflum"
-  },
   "leave_as_is_4facfe55": {
     "message": "Halda óbreyttu"
   },
   "link_with_text_starting_with_start_b3fcbe71": {
     "message": "Tengill með texta byrjar á { start }"
-  },
-  "lists_should_be_formatted_as_lists_f862de8d": {
-    "message": "Lista ætti að sníða sem lista."
   },
   "merge_links_2478df96": {
     "message": "Fella tengla saman"
@@ -203,17 +167,11 @@
   "tables_should_include_at_least_one_header_48779eac": {
     "message": "Töflur ættu að hafa að minnsta kosti einn haus."
   },
-  "text_is_difficult_to_read_without_sufficient_contr_69e62bd6": {
-    "message": "Ef ekki eru nægileg birtuskil milli leturs og bakgrunns er erfitt að lesa texta, sérstaklega ef um er að ræða einstakling sem sér illa."
-  },
   "text_larger_than_18pt_or_bold_14pt_should_display__5c364db6": {
     "message": "Hlutfall hámarks- og lágmarksbirtu fyrir letur sem er stærra en 18 punkta (14 punkta ef feitletrað) ætti að vera að lágmarki 3:1."
   },
   "text_smaller_than_18pt_or_bold_14pt_should_display_aaffb22b": {
     "message": "Hlutfall hámarks- og lágmarksbirtu fyrir letur sem er minna en 18 punkta (14 punkta ef feitletrað) ætti að vera að lágmarki 5:1."
-  },
-  "when_markup_is_used_that_visually_formats_items_as_f941fc1b": {
-    "message": "Þegar merkingar eru notaðar sem sníða atriði sjónrænt sem lista en sýna ekki lista-sambandið, gætu notendur átt í erfiðleikum við að átta sig á upplýsingunum."
   },
   "why_523b3d8c": {
     "message": "Hvers vegna"

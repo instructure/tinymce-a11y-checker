@@ -38,9 +38,6 @@
   "close_accessibility_checker_29d1c51e": {
     "message": "إغلاق المتحقق من إمكانية الوصول"
   },
-  "close_d634289d": {
-    "message": "إغلاق"
-  },
   "column_e1ae5c64": {
     "message": "عمود"
   },
@@ -55,9 +52,6 @@
   },
   "fix_heading_hierarchy_f60884c4": {
     "message": "إصلاح هيكل العنوان"
-  },
-  "format_as_a_list_142210c3": {
-    "message": "التنسيق في صورة قائمة"
   },
   "header_column_f27433cb": {
     "message": "عمود الرأس"
@@ -92,41 +86,11 @@
   "keyboards_navigate_to_links_using_the_tab_key_two__5fab8c82": {
     "message": "تنتقل لوحات المفاتيح إلى الروابط باستخدام المفتاح Tab. يمكن أن يسبب رابطان متجاوران يوجهان إلى نفس الوجهة في إرباك مستخدمي لوحة المفاتيح."
   },
-  "learn_more_about_adjacent_links_2cb9762c": {
-    "message": "معرفة المزيد عن الارتباطات المتجاورة"
-  },
-  "learn_more_about_color_contrast_c019dfb9": {
-    "message": "معرفة المزيد عن تباين اللون"
-  },
-  "learn_more_about_organizing_page_headings_8a7caa2e": {
-    "message": "معرفة المزيد عن تنظيم عناوين الصفحات"
-  },
-  "learn_more_about_table_headers_5f5ee13": {
-    "message": "معرفة المزيد عن رؤوس الجداول"
-  },
-  "learn_more_about_using_alt_text_for_images_5698df9a": {
-    "message": "معرفة المزيد عن استخدام النص البديل للصور"
-  },
-  "learn_more_about_using_captions_with_tables_36fe496f": {
-    "message": "معرفة المزيد عن استخدام التسميات التوضيحية مع الجداول"
-  },
-  "learn_more_about_using_filenames_as_alt_text_264286af": {
-    "message": "معرفة المزيد عن استخدام أسماء الملفات كنصوص بديلة"
-  },
-  "learn_more_about_using_lists_4e6eb860": {
-    "message": "معرفة المزيد عن استخدام القوائم"
-  },
-  "learn_more_about_using_scope_attributes_with_table_20df49aa": {
-    "message": "معرفة المزيد عن استخدام سمات النطاق مع الجداول"
-  },
   "leave_as_is_4facfe55": {
     "message": "ترك كما هو"
   },
   "link_with_text_starting_with_start_b3fcbe71": {
     "message": "رابط بنص يبدأ بـ { start }"
-  },
-  "lists_should_be_formatted_as_lists_f862de8d": {
-    "message": "يجب تنسيق القوائم في صورة قوائم"
   },
   "merge_links_2478df96": {
     "message": "دمج الروابط"
@@ -203,17 +167,11 @@
   "tables_should_include_at_least_one_header_48779eac": {
     "message": "يجب أن تتضمن الجداول رأسًا واحدًا على الأقل."
   },
-  "text_is_difficult_to_read_without_sufficient_contr_69e62bd6": {
-    "message": "تصعب قراءة النص بدون درجة تباين كافية بين النص والخلفية، خاصةً لمن يعانون من ضعف الرؤية."
-  },
   "text_larger_than_18pt_or_bold_14pt_should_display__5c364db6": {
     "message": "يجب أن يعرض النص الأكبر من 18 نقطة (أو 14 نقطة بخط عريض) معدل تباين لا يقل عن 3:1."
   },
   "text_smaller_than_18pt_or_bold_14pt_should_display_aaffb22b": {
     "message": "يجب أن يعرض النص الأصغر من 18 نقطة (أو 14 نقطة بخط عريض) معدل تباين لا يقل عن 4.5:1."
-  },
-  "when_markup_is_used_that_visually_formats_items_as_f941fc1b": {
-    "message": "عند استخدام العلامة التي تنسق العناصر في صورة قوائم  ولكنها لا تشير إلى علاقة القوائم، فقد يواجه المستخدمون صعوبة في التنقل بين المعلومات."
   },
   "why_523b3d8c": {
     "message": "السبب"
