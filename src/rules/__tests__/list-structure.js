@@ -44,7 +44,7 @@ describe("test", () => {
     expect(rule.test(p3)).toBeTruthy()
   })
 
-  test("returns true if li-like", () => {
+  test("returns false if li-like", () => {
     p2.textContent = " * List"
     p3.textContent = " * List"
     expect(rule.test(p2)).toBeFalsy()
