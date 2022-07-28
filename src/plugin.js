@@ -11,12 +11,12 @@ container.className = "tinymce-a11y-checker-container"
 document.body.appendChild(container)
 
 tinymce.create("tinymce.plugins.AccessibilityChecker", {
-  init: function(ed) {
+  init: function (ed) {
     ed.addCommand("openAccessibilityChecker", (...args) => {
       ReactDOM.render(
         <Checker getBody={ed.getBody.bind(ed)} editor={ed} />,
         container,
-        function() {
+        function () {
           // this is a workaround for react 16 since ReactDOM.render is not
           // guaranteed to return the instance synchronously (especially if called
           // within another component's lifecycle method eg: componentDidMount). see:
@@ -28,27 +28,18 @@ tinymce.create("tinymce.plugins.AccessibilityChecker", {
       )
     })
 
-    ed.addCommand("checkAccessibility", function(
+    ed.addCommand("checkAccessibility", function (
       ui,
       { done, config, additional_rules }
     ) {
       checkNode(ed.getBody(), done, config, additional_rules)
     })
 
-    if (tinymce.majorVersion === "4") {
-      // remove this branch when everything is on tinymce 5
-      ed.addButton("check_a11y", {
-        title: formatMessage("Check Accessibility"),
-        cmd: "openAccessibilityChecker",
-        icon: "a11y"
-      })
-    } else {
-      ed.ui.registry.addButton("check_a11y", {
-        title: formatMessage("Check Accessibility"),
-        onAction: _ => ed.execCommand("openAccessibilityChecker"),
-        icon: "a11y"
-      })
-    }
+    ed.ui.registry.addButton("check_a11y", {
+      title: formatMessage("Check Accessibility"),
+      onAction: _ => ed.execCommand("openAccessibilityChecker"),
+      icon: "a11y"
+    })
   }
 })
 

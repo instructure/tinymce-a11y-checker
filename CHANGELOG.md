@@ -7,3 +7,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 - A changelog to make changes clear
+
+### Removed
+- TinyMCE v4 support
