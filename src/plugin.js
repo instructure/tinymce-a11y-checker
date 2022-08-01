@@ -12,9 +12,16 @@ document.body.appendChild(container)
 
 tinymce.create("tinymce.plugins.AccessibilityChecker", {
   init: function (ed) {
-    ed.addCommand("openAccessibilityChecker", (...args) => {
+    ed.addCommand("openAccessibilityChecker", function (
+      ui,
+      { done, config, additionalRules }
+    ) {
       ReactDOM.render(
-        <Checker getBody={ed.getBody.bind(ed)} editor={ed} />,
+        <Checker
+          getBody={ed.getBody.bind(ed)}
+          editor={ed}
+          additionalRules={additionalRules}
+        />,
         container,
         function () {
           // this is a workaround for react 16 since ReactDOM.render is not
@@ -22,8 +29,9 @@ tinymce.create("tinymce.plugins.AccessibilityChecker", {
           // within another component's lifecycle method eg: componentDidMount). see:
           // https://github.com/facebook/react/issues/10309#issuecomment-318434635
           instance = this
+          if (config) getInstance(instance => instance.setConfig(config))
           pendingInstanceCallbacks.forEach(cb => cb(instance))
-          instance.check(...args)
+          instance.check(done)
         }
       )
     })

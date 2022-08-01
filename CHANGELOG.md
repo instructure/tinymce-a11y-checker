@@ -11,5 +11,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - `checkAccessibility` command's paramater `additional_rules` has been renamed `additionalRules`
 
+### Fixed
+- Fixed bug that caused inconsistent checking behavior between `checkAccessibility` and `openAccessibilityChecker` when using the non-standard configuration
+
 ### Removed
 - TinyMCE v4 support
