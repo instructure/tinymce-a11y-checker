@@ -30,9 +30,9 @@ tinymce.create("tinymce.plugins.AccessibilityChecker", {
 
     ed.addCommand("checkAccessibility", function (
       ui,
-      { done, config, additional_rules }
+      { done, config, additionalRules }
     ) {
-      checkNode(ed.getBody(), done, config, additional_rules)
+      checkNode(ed.getBody(), done, config, additionalRules)
     })
 
     ed.ui.registry.addButton("check_a11y", {

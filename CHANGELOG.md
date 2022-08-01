@@ -8,5 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - A changelog to make changes clear
 
+### Changed
+- `checkAccessibility` command's paramater `additional_rules` has been renamed `additionalRules`
+
 ### Removed
 - TinyMCE v4 support
