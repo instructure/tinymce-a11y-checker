@@ -44,15 +44,15 @@ export default class Checker extends React.Component {
     formStateValid: false,
     errorIndex: 0,
     config: {},
-    showWhyPopover: false
+    showWhyPopover: false,
   }
 
   static defaultProps = {
-    additionalRules: []
+    additionalRules: [],
   }
 
   componentDidMount() {
-    this.props.editor.on("Remove", editor => {
+    this.props.editor.on("Remove", (editor) => {
       this.setState({ open: false })
     })
   }
@@ -84,7 +84,7 @@ export default class Checker extends React.Component {
         open: true,
         checking: true,
         errors: [],
-        errorIndex: 0
+        errorIndex: 0,
       },
       () => {
         if (typeof this.state.config.beforeCheck === "function") {
@@ -110,7 +110,7 @@ export default class Checker extends React.Component {
 
   _check(done) {
     const node = this.props.getBody()
-    const checkDone = errors => {
+    const checkDone = (errors) => {
       this.setState({ errorIndex: 0, errors, checking: false }, () => {
         this.selectCurrent()
         done()
@@ -204,7 +204,7 @@ export default class Checker extends React.Component {
     }
     this.setState({
       formState,
-      formStateValid: this.formStateValid(formState)
+      formStateValid: this.formStateValid(formState),
     })
   }
 
@@ -290,7 +290,7 @@ export default class Checker extends React.Component {
     const rule = this.errorRule()
     const issueNumberMessage = formatMessage("Issue { num }/{ total }", {
       num: this.state.errorIndex + 1,
-      total: this.state.errors.length
+      total: this.state.errors.length,
     })
 
     return (
@@ -298,16 +298,17 @@ export default class Checker extends React.Component {
         <Tray
           data-mce-component
           label={formatMessage("Accessibility Checker")}
+          mountNode={this.props.mountNode}
           open={this.state.open}
           onDismiss={() => this.handleClose()}
           placement="end"
-          contentRef={e => (this.trayElement = e)}
+          contentRef={(e) => (this.trayElement = e)}
         >
           <CloseButton
             placement="start"
             offset="x-small"
             onClick={() => this.handleClose()}
-            buttonRef={ref => (this._closeButtonRef = ref)}
+            buttonRef={(ref) => (this._closeButtonRef = ref)}
           >
             {formatMessage("Close Accessibility Checker")}
           </CloseButton>
@@ -381,8 +382,8 @@ export default class Checker extends React.Component {
                                     <ApplyTheme
                                       theme={{
                                         [Link.theme]: {
-                                          textDecoration: "underline"
-                                        }
+                                          textDecoration: "underline",
+                                        },
                                       }}
                                     >
                                       <Link href={rule.link} target="_blank">
@@ -401,7 +402,7 @@ export default class Checker extends React.Component {
                 </View>
                 <form onSubmit={preventDefault(() => this.fixIssue())}>
                   <Text as="div">{this.errorMessage()}</Text>
-                  {rule.form().map(f => (
+                  {rule.form().map((f) => (
                     <View as="div" key={f.dataKey} margin="medium 0 0">
                       {this.renderField(f)}
                     </View>
@@ -479,14 +480,14 @@ export default class Checker extends React.Component {
               this.updateFormState({
                 target: {
                   name: f.dataKey,
-                  value: option.value
-                }
+                  value: option.value,
+                },
               })
             }}
             value={this.state.formState[f.dataKey]}
             renderLabel={() => f.label}
           >
-            {f.options.map(o => (
+            {f.options.map((o) => (
               <SimpleSelect.Option key={o[0]} id={o[0]} value={o[0]}>
                 {o[1]}
               </SimpleSelect.Option>
