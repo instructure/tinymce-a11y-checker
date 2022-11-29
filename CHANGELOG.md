@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.1.2] (unpublished so far)
+- Changes to cope with the RCE being put in browser-native fullscreen
+- Fixed a bug that over aggressively kept track of the blue box that shows
+  the element in violation.
+
 ## [4.1.1] - 2022-08-10
 ### Changed
 - Updated dependency versions

@@ -28,6 +28,11 @@ import checkNode from "../node-checker"
 import formatMessage from "../format-message"
 import { clearIndicators } from "../utils/indicate"
 
+// safari still doesn't support the standard api
+const FS_CHANGEEVENT = document.exitFullscreen
+  ? "fullscreenchange"
+  : "webkitfullscreenchange"
+
 const noop = () => {}
 
 export default class Checker extends React.Component {
@@ -50,6 +55,21 @@ export default class Checker extends React.Component {
     this.props.editor.on("Remove", editor => {
       this.setState({ open: false })
     })
+  }
+
+  componentDidUpdate(_prevProps, prevState) {
+    if (prevState.open !== this.state.open) {
+      if (this.state.open) {
+        window.addEventListener(FS_CHANGEEVENT, this.onFullscreenChange)
+      } else {
+        window.removeEventListener(FS_CHANGEEVENT, this.onFullscreenChange)
+      }
+    }
+  }
+
+  onFullscreenChange = (event) => {
+    clearIndicators(event.target)
+    this.selectCurrent()
   }
 
   setConfig(config) {
