@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.1.3]
+
+- fix function that moves the box highlighting a11y violations so it properly tracks
+  when the user scrolls
+
 ## [4.1.2] - 2022-11-30
 
 - Changes to cope with the RCE being put in browser-native fullscreen

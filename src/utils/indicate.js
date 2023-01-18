@@ -1,8 +1,12 @@
 import offset from "bloody-offset"
 
-const MARGIN = 3
+const BORDER = 1
+const PADDING = 3
 const THROTTLE = 10
 
+// return the rect that is the size of the target's bounding rect
+// but offset by tinymce's editor iframe's offset so we can
+// locate the target relative to the page at large
 export function indicatorRegion(
   editorFrame,
   target,
@@ -15,14 +19,14 @@ export function indicatorRegion(
     top: b.top,
     left: b.left,
     width: b.right - b.left,
-    height: b.bottom - b.top
+    height: b.bottom - b.top,
   }
 
   return {
     width: innerShape.width,
     height: innerShape.height,
     left: outerShape.left + innerShape.left,
-    top: outerShape.top + innerShape.top
+    top: outerShape.top + innerShape.top,
   }
 }
 
@@ -38,13 +42,15 @@ export function clearIndicators(parent) {
   const container = parent || indicatorContainer()
   Array.from(
     container.querySelectorAll(".a11y-checker-selection-indicator")
-  ).forEach(existingElem => {
+  ).forEach((existingElem) => {
     existingElem.parentNode.removeChild(existingElem)
   })
 }
 
-export default function indicate(editor, elem, margin = MARGIN) {
+export default function indicate(editor, elem, padding = PADDING) {
   clearIndicators()
+
+  const padPlusBorder = padding + BORDER
 
   const editorFrame = editor.getContainer().querySelector("iframe")
 
@@ -58,24 +64,22 @@ export default function indicate(editor, elem, margin = MARGIN) {
   el.setAttribute(
     "style",
     `
-    border: 2px solid #000;
+    border: ${BORDER}px solid #000;
     background-color: #008EE2;
     position: absolute;
     display: block;
-    borderRadius: 5px;
+    border-radius: 5px;
     z-index: 9998;
-    left: ${region.left - margin}px;
-    top: ${region.top - margin}px;
-    width: ${region.width + 2 * margin}px;
-    height: ${region.height + 2 * margin}px;
-    opacity: 0.5;
+    box-sizing: content-box;
+    padding: ${padding}px;
+    left: ${region.left - padPlusBorder}px;
+    top: ${region.top - padPlusBorder}px;
+    width: ${region.width}px;
+    height: ${region.height}px;
+    opacity: 0.4;
   `
   )
-
   indicatorContainer().appendChild(el)
-
-  el.style.opacity = 0.8
-  el.style.transition = "opacity 0.4s"
 
   let lastAdjust = 0
   const adjust = (timestamp) => {
@@ -86,31 +90,62 @@ export default function indicate(editor, elem, margin = MARGIN) {
         return
       }
 
+      // boundingRect is relative to tinymce's iframe
       const boundingRect = elem.getBoundingClientRect()
+      // region shifts boundingRect to be relative to the page
       const region = indicatorRegion(editorFrame, elem, offset, boundingRect)
+      // editorFrameOffest is tinymce's iframe's offset in the page
       const editorFrameOffset = offset(editorFrame)
-      el.style.left = `${region.left - margin}px`
-      el.style.top = `${region.top - margin}px`
+      // where is the body?
+      const bodyRect = document.body.getBoundingClientRect()
+      // if the page is scrolled enough the tinymce header is position:fixed
+      // at the top of the page. take that into account
+      const stickyOffset = editor.container.classList.contains(
+        "tox-tinymce--toolbar-sticky-on"
+      )
+        ? editor.container.querySelector(".tox-editor-header").offsetHeight
+        : 0
+
+      el.style.left = `${region.left - padPlusBorder}px`
+      el.style.top = `${region.top - padPlusBorder}px`
       el.style.display = "block"
-      if (boundingRect.top < 0) {
+      if (
+        stickyOffset > 0 &&
+        region.top + bodyRect.top - padPlusBorder < stickyOffset
+      ) {
+        // the page is scrolled so the indicator should be behind tinymce's sticky header
+        const newHeight =
+          region.height - (stickyOffset - (region.top + bodyRect.top))
+        if (newHeight < 0) {
+          el.style.display = "none"
+        }
+        el.style.top = `${stickyOffset - bodyRect.top}px`
+        el.style.height = `${newHeight}px`
+      } else if (boundingRect.top - padPlusBorder < 0) {
+        // tinymce's iframe content is scrolled so the indicator is above the visible area
         const newHeight = region.height + boundingRect.top
         if (newHeight < 0) {
           el.style.display = "none"
         }
-        const newTop = region.height - newHeight
+        el.style.top = `${editorFrameOffset.top}px`
         el.style.height = `${newHeight}px`
-        el.style.marginTop = `${newTop}px`
-      }
-      if (boundingRect.bottom > editorFrameOffset.height) {
+      } else if (
+        boundingRect.bottom + padPlusBorder >
+        editorFrameOffset.height
+      ) {
+        // the indicator is below the visible area in tinymce's content area
         const newHeight =
-          region.height + (editorFrameOffset.height - boundingRect.bottom)
+          region.height - (boundingRect.bottom - editorFrameOffset.height)
         if (newHeight < 0) {
           el.style.display = "none"
         }
         el.style.height = `${newHeight}px`
+      } else {
+        // no special case
+        el.style.height = `${region.height}px`
       }
-      window.requestAnimationFrame(adjust)
     }
+    window.requestAnimationFrame(adjust)
   }
 
   window.requestAnimationFrame(adjust)

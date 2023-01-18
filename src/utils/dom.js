@@ -32,7 +32,7 @@ export function select(editor, elem, indicateFn = indicate) {
   if (elem == null) {
     return
   }
-  elem.scrollIntoView()
+  elem.scrollIntoView(false)
   indicateFn(editor, elem)
 }
 
@@ -106,7 +106,7 @@ export function splitStyleAttribute(styleString) {
 
 export function createStyleString(styleObj) {
   let styleString = Object.keys(styleObj)
-    .map(key => `${key}:${styleObj[key]}`)
+    .map((key) => `${key}:${styleObj[key]}`)
     .join(";")
   if (styleString) {
     styleString = `${styleString};`
@@ -116,5 +116,5 @@ export function createStyleString(styleObj) {
 
 export function hasTextNode(elem) {
   const nodes = Array.from(elem.childNodes)
-  return nodes.some(x => x.nodeType === Node.TEXT_NODE)
+  return nodes.some((x) => x.nodeType === Node.TEXT_NODE)
 }
