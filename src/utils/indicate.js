@@ -115,7 +115,9 @@ export default function indicate(editor, elem, padding = PADDING) {
       ) {
         // the page is scrolled so the indicator should be behind tinymce's sticky header
         const newHeight =
-          region.height - (stickyOffset - (region.top + bodyRect.top))
+          region.height -
+          (stickyOffset - (region.top + bodyRect.top)) -
+          padPlusBorder
         if (newHeight < 0) {
           el.style.display = "none"
         }
@@ -123,7 +125,7 @@ export default function indicate(editor, elem, padding = PADDING) {
         el.style.height = `${newHeight}px`
       } else if (boundingRect.top - padPlusBorder < 0) {
         // tinymce's iframe content is scrolled so the indicator is above the visible area
-        const newHeight = region.height + boundingRect.top
+        const newHeight = region.height + boundingRect.top - padPlusBorder
         if (newHeight < 0) {
           el.style.display = "none"
         }
@@ -135,7 +137,9 @@ export default function indicate(editor, elem, padding = PADDING) {
       ) {
         // the indicator is below the visible area in tinymce's content area
         const newHeight =
-          region.height - (boundingRect.bottom - editorFrameOffset.height)
+          region.height -
+          (boundingRect.bottom - editorFrameOffset.height) -
+          padPlusBorder
         if (newHeight < 0) {
           el.style.display = "none"
         }
