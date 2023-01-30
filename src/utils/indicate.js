@@ -45,7 +45,7 @@ export function findChildDepth(parent, target) {
   return depth + 1
 }
 
-// guarantee that the <style> element will use for adding the
+// guarantee that the <style> element we use for adding the
 // CSS that generates the a11y violation indicator exists in the dom
 export function ensureA11yCheckerStyleElement(doc) {
   let styleElem = doc.getElementById(A11Y_CHECKER_STYLE_ELEM_ID)
