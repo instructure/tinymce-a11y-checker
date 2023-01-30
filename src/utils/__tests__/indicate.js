@@ -1,7 +1,7 @@
 import indicate, {
   clearIndicators,
   findChildDepth,
-  findDepthSelector,
+  buildDepthSelector,
   INDICATOR_STYLE,
   A11Y_CHECKER_STYLE_ELEM_ID,
   ensureA11yCheckerStyleElement,
@@ -43,9 +43,9 @@ describe("findChildDepth", () => {
   })
 })
 
-describe("findDepthSelector", () => {
+describe("buildDepthSelector", () => {
   it("returns the css selector to the given element", () => {
-    const sel = findDepthSelector(document, document.getElementById("s3"))
+    const sel = buildDepthSelector(document.getElementById("s3"))
     expect(sel).toEqual("body>:nth-child(3)>:nth-child(3)")
   })
 })
