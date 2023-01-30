@@ -30,18 +30,18 @@ export function findChildDepth(parent, target) {
 }
 
 export function ensureA11yCheckerStyleElement(doc) {
-  let style_elem = doc.getElementById(A11Y_CHECKER_STYLE_ELEM_ID)
-  if (!style_elem) {
-    style_elem = doc.createElement("style")
-    style_elem.id = A11Y_CHECKER_STYLE_ELEM_ID
-    doc.head.appendChild(style_elem)
+  let styleElem = doc.getElementById(A11Y_CHECKER_STYLE_ELEM_ID)
+  if (!styleElem) {
+    styleElem = doc.createElement("style")
+    styleElem.id = A11Y_CHECKER_STYLE_ELEM_ID
+    doc.head.appendChild(styleElem)
   }
-  return style_elem
+  return styleElem
 }
 
 export default function indicate(elem) {
   const doc = elem.ownerDocument
-  const style_elem = ensureA11yCheckerStyleElement(doc)
+  const styleElem = ensureA11yCheckerStyleElement(doc)
   const selector = findDepthSelector(doc, elem)
-  style_elem.textContent = `${selector}{${INDICATOR_STYLE}}`
+  styleElem.textContent = `${selector}{${INDICATOR_STYLE}}`
 }
