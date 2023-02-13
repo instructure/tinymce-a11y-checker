@@ -53,7 +53,9 @@ export default class Checker extends React.Component {
 
   componentDidMount() {
     this.props.editor.on("Remove", (editor) => {
-      this.setState({ open: false })
+      this.setState({ open: false },  () => {
+        this.props.onClose()
+      })
     })
   }
 
@@ -283,7 +285,9 @@ export default class Checker extends React.Component {
   handleClose() {
     this.onLeaveError()
     clearIndicators()
-    this.setState({ open: false })
+    this.setState({ open: false },  () => {
+      this.props.onClose()
+    })
   }
 
   render() {
