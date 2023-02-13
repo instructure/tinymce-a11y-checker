@@ -1,0 +1,194 @@
+{
+  "accessibility_checker_b3af1f6c": {
+    "message": "Helppokäyttöisyyden tarkistus"
+  },
+  "action_to_take_b626a99a": {
+    "message": "Toimenpide, johon on ryhdyttävä:"
+  },
+  "add_a_caption_2a915239": {
+    "message": "Lisää selitys"
+  },
+  "add_alt_text_for_the_image_48cd88aa": {
+    "message": "Lisää alt-teksti kuvalle"
+  },
+  "adjacent_links_with_the_same_url_should_be_a_singl_7a1f7f6c": {
+    "message": "Sellaisten peräkkäisten linkkien, joilla on sama URL, pitäisi olla yksi linkki."
+  },
+  "alt_attribute_text_should_not_contain_more_than_12_e21d4040": {
+    "message": "Määritetekstissä ei saa olla yli 120 merkkiä."
+  },
+  "apply_781a2546": {
+    "message": "Käytä"
+  },
+  "change_alt_text_92654906": {
+    "message": "Vaihda alt-tekstiä"
+  },
+  "change_heading_tag_to_paragraph_a61e3113": {
+    "message": "Vaihda otsikkotunniste kappaleeseen"
+  },
+  "change_text_color_1aecb912": {
+    "message": "Vaihda tekstin väriä"
+  },
+  "check_accessibility_3c78211c": {
+    "message": "Tarkista käytettävyys"
+  },
+  "checking_for_accessibility_issues_fac18c6d": {
+    "message": "Tarkistetaan käytettävyysongelmien varalta"
+  },
+  "close_accessibility_checker_29d1c51e": {
+    "message": "Sulje käytettävyyden tarkistus"
+  },
+  "close_d634289d": {
+    "message": "Sulje"
+  },
+  "column_e1ae5c64": {
+    "message": "Sarake"
+  },
+  "column_group_1c062368": {
+    "message": "Sarakeryhmä"
+  },
+  "decorative_image_fde98579": {
+    "message": "Koristeellinen kuva"
+  },
+  "element_starting_with_start_91bf4c3b": {
+    "message": "Elementti, joka alkaa { start }"
+  },
+  "fix_heading_hierarchy_f60884c4": {
+    "message": "Korjaa otsikon hierarkia"
+  },
+  "format_as_a_list_142210c3": {
+    "message": "Muotoile luettelona"
+  },
+  "header_column_f27433cb": {
+    "message": "Otsikkosarake"
+  },
+  "header_row_and_column_ec5b9ec": {
+    "message": "Otsikon rivi ja sarake"
+  },
+  "header_row_f33eb169": {
+    "message": "Otsikkorivi"
+  },
+  "heading_levels_should_not_be_skipped_3947c0e0": {
+    "message": "Otsikon tasoja ei saa ohittaa."
+  },
+  "heading_starting_with_start_42a3e7f9": {
+    "message": "Otsikot, jotka alkavat { start }"
+  },
+  "headings_should_not_contain_more_than_120_characte_3c0e0cb3": {
+    "message": "Otsikoissa voi olla korkeintaan 120 merkkiä."
+  },
+  "image_filenames_should_not_be_used_as_the_alt_attr_bcfd7780": {
+    "message": "Kuvan tiedostonimiä ei saa käyttää kuvan sisältöä kuvaavana alt-määritteenä."
+  },
+  "image_with_filename_file_aacd7180": {
+    "message": "Kuva, jonka tiedostonimi on { file }"
+  },
+  "images_should_include_an_alt_attribute_describing__b86d6a86": {
+    "message": "Kuvien pitäisi sisältää alt-määrite, joka kuvaa kuvan sisältöä-"
+  },
+  "issue_num_total_f94536cf": {
+    "message": "Ongelma { num }/{ total }"
+  },
+  "keyboards_navigate_to_links_using_the_tab_key_two__5fab8c82": {
+    "message": "Näppäimistöt navigoivat linkkeihin Välilehti-painikkeen avulla. Kaksi peräkkäistä linkkiä, jotka ohjaavat samaan päämäärään, voivat olla hämmentäviä näppäimistön käyttäjille."
+  },
+  "leave_as_is_4facfe55": {
+    "message": "Jätä sellaiseksi kuin on"
+  },
+  "link_with_text_starting_with_start_b3fcbe71": {
+    "message": "Linkki tekstillä, joka alkaa { start }"
+  },
+  "lists_should_be_formatted_as_lists_f862de8d": {
+    "message": "Luettelot pitäisi muotoilla luetteloina."
+  },
+  "merge_links_2478df96": {
+    "message": "Yhdistä linkkejä"
+  },
+  "next_40e12421": {
+    "message": "Seuraava"
+  },
+  "no_accessibility_issues_were_detected_f8d3c875": {
+    "message": "Ei havaittu käytettävyysongelmia."
+  },
+  "no_headers_9bc7dc7f": {
+    "message": "Ei otsikoita"
+  },
+  "none_3b5e34d2": {
+    "message": "Ei mitään"
+  },
+  "paragraph_starting_with_start_a59923f8": {
+    "message": "Kappale, joka alkaa { start }"
+  },
+  "prev_f82cbc48": {
+    "message": "Edellinen"
+  },
+  "remove_heading_style_5fdc8855": {
+    "message": "Poista otsikkotyyli"
+  },
+  "row_fc0944a7": {
+    "message": "Rivi"
+  },
+  "row_group_979f5528": {
+    "message": "Rivin ryhmä"
+  },
+  "screen_readers_cannot_determine_what_is_displayed__6a5842ab": {
+    "message": "Näytönlukijat eivät voi määrittää, mikä näkyy kuvassa ilman vaihtoehtoista tekstiä, ja tiedostonimet ovat usein tarkoituksettomia numeroiden ja kirjaiminen merkkijonoja, jotka eivät kuvaa kontekstia tai tarkoitusta."
+  },
+  "screen_readers_cannot_determine_what_is_displayed__6f1ea667": {
+    "message": "Näytönlukijat eivät voi määrittää, mitä kuvassa näkyy ilman vaihtoehtoista tekstiä, joka kuvaa kuvan sisällön ja tarkoituksen. Vaihtoehtoisen tekstin pitäisi olla yksinkertainen ja tiivis."
+  },
+  "screen_readers_cannot_determine_what_is_displayed__a57e6723": {
+    "message": "Näytönlukijat eivät voi määrittää, mitä kuvassa näkyy ilman vaihtoehtoista tekstiä, joka kuvaa kuvan sisällön ja tarkoituksen."
+  },
+  "screen_readers_cannot_interpret_tables_without_the_bd861652": {
+    "message": "Näytönlukijat eivät voi tulkita taulukoita ilman asianmukaista rakennetta. Taulukon otsikot tarjoavat suunnan ja sisältöalueen."
+  },
+  "screen_readers_cannot_interpret_tables_without_the_e62912d5": {
+    "message": "Näytönlukijat eivät voi tulkita taulukoita ilman asianmukaista rakennetta. Taulukon tekstit kuvaavat kontekstin ja taulukon yleisen ymmärryksen."
+  },
+  "screen_readers_cannot_interpret_tables_without_the_f0bdec0f": {
+    "message": "Näytönlukijat eivät voi tulkita taulukoita ilman asianmukaista rakennetta. Taulukon otsikot tarjoavat sisällön suunnan ja yleiskatsauksen."
+  },
+  "set_header_scope_8c548f40": {
+    "message": "Määritä otsikon ala"
+  },
+  "set_table_header_cfab13a0": {
+    "message": "Määritä taulukon otsikko"
+  },
+  "sighted_users_browse_web_pages_quickly_looking_for_1d4db0c1": {
+    "message": "Näkevät käyttäjät selaavat verkkosivustoja nopeasti ja etsivät suuria tai lihavoituja otsikoita. Näytönlukijan käyttäjät nojaavat otsikkoihin ymmärtääkseen kontekstuaalisesti. Otsikoita pitäisi käyttää asianmukaisen rakenteen luomiseksi."
+  },
+  "sighted_users_browse_web_pages_quickly_looking_for_ade806f5": {
+    "message": "Näkevät käyttäjät selaavat verkkosivustoja nopeasti ja etsivät suuria tai lihavoituja otsikoita. Näytönlukijan käyttäjät nojaavat otsikkoihin ymmärtääkseen kontekstuaalisesti. Otsikoiden pitäisi olla tiiviitä ja asianmukaisessa rakenteessa."
+  },
+  "table_header_starting_with_start_ffcabba6": {
+    "message": "Taulukon otsikko, joka alkaa { start }"
+  },
+  "table_starting_with_start_e7232848": {
+    "message": "Taulukko, joka alkaa { start }"
+  },
+  "tables_headers_should_specify_scope_5abf3a8e": {
+    "message": "Taulukon otsikoiden pitäisi määrittää ala."
+  },
+  "tables_should_include_a_caption_describing_the_con_e91e78fc": {
+    "message": "Taulukoiden pitäisi sisältää selitys, joka kuvaa taulukon sisältöä."
+  },
+  "tables_should_include_at_least_one_header_48779eac": {
+    "message": "Taulukkojen pitäisi sisältää vähintään yksi otsikko."
+  },
+  "text_is_difficult_to_read_without_sufficient_contr_69e62bd6": {
+    "message": "Teksti on vaikea lukea erityisesti huononäköisille, jos tekstin ja tausta välillä ei ole riittävää kontrastia."
+  },
+  "text_larger_than_18pt_or_bold_14pt_should_display__5c364db6": {
+    "message": "18pt:n (tai lihavoitu 14pt) kokoista tekstiä suurempi teksti pitäisi näyttää vähintään kontrastitasolla 3:1."
+  },
+  "text_smaller_than_18pt_or_bold_14pt_should_display_aaffb22b": {
+    "message": "18pt:n (tai lihavoitu 14pt) kokoista tekstiä pitäisi näyttää vähintään kontrastitasolla 4.5:1."
+  },
+  "when_markup_is_used_that_visually_formats_items_as_f941fc1b": {
+    "message": "Kun käytetään merkintää, joka visuaalisesti muotoilee kohteet luettelona, mutta ei ilmaise suhdetta, käyttäjillä saattaa olla vaikeuksia tietojen navigoinnissa."
+  },
+  "why_523b3d8c": {
+    "message": "Miksi..."
+  }
+}
