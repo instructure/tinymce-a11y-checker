@@ -38,9 +38,6 @@
   "close_accessibility_checker_29d1c51e": {
     "message": "Close Accessibility Checker"
   },
-  "close_d634289d": {
-    "message": "Close"
-  },
   "column_e1ae5c64": {
     "message": "Column"
   },
@@ -55,9 +52,6 @@
   },
   "fix_heading_hierarchy_f60884c4": {
     "message": "Fix heading hierarchy"
-  },
-  "format_as_a_list_142210c3": {
-    "message": "Format as a list"
   },
   "header_column_f27433cb": {
     "message": "Header column"
@@ -92,41 +86,11 @@
   "keyboards_navigate_to_links_using_the_tab_key_two__5fab8c82": {
     "message": "Keyboards navigate to links using the Tab key. Two adjacent links that direct to the same destination can be confusing to keyboard users."
   },
-  "learn_more_about_adjacent_links_2cb9762c": {
-    "message": "Learn more about adjacent links"
-  },
-  "learn_more_about_color_contrast_c019dfb9": {
-    "message": "Learn more about colour contrast"
-  },
-  "learn_more_about_organizing_page_headings_8a7caa2e": {
-    "message": "Learn more about organising page headings"
-  },
-  "learn_more_about_table_headers_5f5ee13": {
-    "message": "Learn more about table headers"
-  },
-  "learn_more_about_using_alt_text_for_images_5698df9a": {
-    "message": "Learn more about using alt text for images"
-  },
-  "learn_more_about_using_captions_with_tables_36fe496f": {
-    "message": "Learn more about using captions with tables"
-  },
-  "learn_more_about_using_filenames_as_alt_text_264286af": {
-    "message": "Learn more about using filenames as alt text"
-  },
-  "learn_more_about_using_lists_4e6eb860": {
-    "message": "Learn more about using lists"
-  },
-  "learn_more_about_using_scope_attributes_with_table_20df49aa": {
-    "message": "Learn more about using scope attributes with tables"
-  },
   "leave_as_is_4facfe55": {
     "message": "Leave as is"
   },
   "link_with_text_starting_with_start_b3fcbe71": {
     "message": "Link with text starting with { start }"
-  },
-  "lists_should_be_formatted_as_lists_f862de8d": {
-    "message": "Lists should be formatted as lists."
   },
   "merge_links_2478df96": {
     "message": "Merge links"
@@ -203,17 +167,11 @@
   "tables_should_include_at_least_one_header_48779eac": {
     "message": "Tables should include at least one header."
   },
-  "text_is_difficult_to_read_without_sufficient_contr_69e62bd6": {
-    "message": "Text is difficult to read without sufficient contrast between the text and the background, especially for those with low vision."
-  },
   "text_larger_than_18pt_or_bold_14pt_should_display__5c364db6": {
     "message": "Text larger than 18pt (or bold 14pt) should display a minimum contrast ratio of 3:1."
   },
   "text_smaller_than_18pt_or_bold_14pt_should_display_aaffb22b": {
     "message": "Text smaller than 18pt (or bold 14pt) should display a minimum contrast ratio of 4.5:1."
-  },
-  "when_markup_is_used_that_visually_formats_items_as_f941fc1b": {
-    "message": "When markup is used that visually formats items as a list but does not indicate the list relationship, users may have difficulty in navigating the information."
   },
   "why_523b3d8c": {
     "message": "Why"

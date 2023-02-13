@@ -38,9 +38,6 @@
   "close_accessibility_checker_29d1c51e": {
     "message": "Kati Kaitirotiro Whakaurutanga"
   },
-  "close_d634289d": {
-    "message": "Katia"
-  },
   "column_e1ae5c64": {
     "message": "Pou"
   },
@@ -55,9 +52,6 @@
   },
   "fix_heading_hierarchy_f60884c4": {
     "message": "Whakatikahia te hiranga o te pane"
-  },
-  "format_as_a_list_142210c3": {
-    "message": "Whakahōputu hei rārangi"
   },
   "header_column_f27433cb": {
     "message": "Pane pou"
@@ -92,41 +86,11 @@
   "keyboards_navigate_to_links_using_the_tab_key_two__5fab8c82": {
     "message": "Ka whakaterehia e ngā papa pātuhi ngā hononga ki te whakamahi i Ripa kī. Ngā hononga e rua e tata ana e tika ana ki te haerenga rite ka pōraruraru ki ngā papa pātuhi kaiwhakamahi."
   },
-  "learn_more_about_adjacent_links_2cb9762c": {
-    "message": "Ako ano i ngā hono tata"
-  },
-  "learn_more_about_color_contrast_c019dfb9": {
-    "message": "Ako anō i ngā tae whakarerekē"
-  },
-  "learn_more_about_organizing_page_headings_8a7caa2e": {
-    "message": "Ako anō i ngā whakahaere ngā pane whārangi"
-  },
-  "learn_more_about_table_headers_5f5ee13": {
-    "message": "Ako anō i ngā pane rārangi"
-  },
-  "learn_more_about_using_alt_text_for_images_5698df9a": {
-    "message": "Ako anō i te mahi i ngā alt kuputuhi mo ngā āhua"
-  },
-  "learn_more_about_using_captions_with_tables_36fe496f": {
-    "message": "Ako anō i te mahi i ngā kōrero me ngā rārangi"
-  },
-  "learn_more_about_using_filenames_as_alt_text_264286af": {
-    "message": "Ako anō i te mahi i ngā ingoa kōnae i te alt kuputuhi"
-  },
-  "learn_more_about_using_lists_4e6eb860": {
-    "message": "Ako anō i te mahi i ngā rārangi"
-  },
-  "learn_more_about_using_scope_attributes_with_table_20df49aa": {
-    "message": "Ako anō i te mahi i ngā whānuitanga huanga me ngā rārangi"
-  },
   "leave_as_is_4facfe55": {
     "message": "Waiho ki tēnei"
   },
   "link_with_text_starting_with_start_b3fcbe71": {
     "message": "Hono me te kuputuhi e tīmata ana me { start }"
-  },
-  "lists_should_be_formatted_as_lists_f862de8d": {
-    "message": "Me whakaritehia ngā rārangi hei rārangi."
   },
   "merge_links_2478df96": {
     "message": "Whakapiri ngā hononga"
@@ -203,17 +167,11 @@
   "tables_should_include_at_least_one_header_48779eac": {
     "message": "Me whakauru ngā ripanga i te iti rawa o te pane kotahi."
   },
-  "text_is_difficult_to_read_without_sufficient_contr_69e62bd6": {
-    "message": "He uaua te panui, kaore he rerekētanga i waenga i te tuhinga me te papamuri, ina koa mo te hunga e iti ana te kite."
-  },
   "text_larger_than_18pt_or_bold_14pt_should_display__5c364db6": {
     "message": "Ko te kuputuhi nui ake i te 18pt (me te maia 14pt) me whakātu i te ōwehenga rerekē iti o te 3: 1."
   },
   "text_smaller_than_18pt_or_bold_14pt_should_display_aaffb22b": {
     "message": "Ko te kuputuhi iti atu i te 18pt (me te maia 14pt) me whakātu i te ōwehenga rerekē iti o te 4.5: 1."
-  },
-  "when_markup_is_used_that_visually_formats_items_as_f941fc1b": {
-    "message": "Ina whakamahia te tohu tohu i ngā taonga tautuhi tirohanga hei rārangi, ēngari kaore e tohu i te hononga o te rārangi, he uaua ki ngā kaiwhakamahi te whakawhiti i ngā kōrero."
   },
   "why_523b3d8c": {
     "message": "He aha"
