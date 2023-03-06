@@ -108,6 +108,7 @@ const getValidHeadings = elem => {
 
 export default {
   id: "headings-sequence",
+  bulkUpdateSupported: true,
   test: elem => {
     const testTags = {
       H2: true,
