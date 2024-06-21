@@ -38,9 +38,6 @@
   "close_accessibility_checker_29d1c51e": {
     "message": "Fèmen Verifikatè Aksesibilite"
   },
-  "close_d634289d": {
-    "message": "Fèmen"
-  },
   "column_e1ae5c64": {
     "message": "Kolonn"
   },
@@ -55,9 +52,6 @@
   },
   "fix_heading_hierarchy_f60884c4": {
     "message": "Fikse yerachi antèt"
-  },
-  "format_as_a_list_142210c3": {
-    "message": "Fòmate tankou lis"
   },
   "header_column_f27433cb": {
     "message": "Kolonn antèt"
@@ -92,41 +86,11 @@
   "keyboards_navigate_to_links_using_the_tab_key_two__5fab8c82": {
     "message": "Klavye navige nan lyen yo ak touch Tab la. De lyen adjasan ki dirije nan menm destinasyon an ka pèmèt moun k ap itilize klavye yo twompe yo."
   },
-  "learn_more_about_adjacent_links_2cb9762c": {
-    "message": "Aprann plis sou lyen adjasan yo"
-  },
-  "learn_more_about_color_contrast_c019dfb9": {
-    "message": "Aprann plis sou kontras koulè yo"
-  },
-  "learn_more_about_organizing_page_headings_8a7caa2e": {
-    "message": "Aprann plis sou òganizasyon antèt paj"
-  },
-  "learn_more_about_table_headers_5f5ee13": {
-    "message": "Aprann plis sou antèt tablo yo"
-  },
-  "learn_more_about_using_alt_text_for_images_5698df9a": {
-    "message": "Aprann plis sou tèks alt pou imaj yo"
-  },
-  "learn_more_about_using_captions_with_tables_36fe496f": {
-    "message": "Aprann plis sou itilizasyon lejand nan tablo yo"
-  },
-  "learn_more_about_using_filenames_as_alt_text_264286af": {
-    "message": "Aprann plis sou itilizasyon non fichye yo tankou tèks alt"
-  },
-  "learn_more_about_using_lists_4e6eb860": {
-    "message": "Aprann plis sou itilizasyon lis yo"
-  },
-  "learn_more_about_using_scope_attributes_with_table_20df49aa": {
-    "message": "Aprann plis sou itilizasyon atribi pòte yo ak tablo yo"
-  },
   "leave_as_is_4facfe55": {
     "message": "Kite tankou"
   },
   "link_with_text_starting_with_start_b3fcbe71": {
     "message": "Lyen ak tèks ki kòmanse pa { start }"
-  },
-  "lists_should_be_formatted_as_lists_f862de8d": {
-    "message": "Lis yo dwe fòmate tankou lis."
   },
   "merge_links_2478df96": {
     "message": "Fizyone lyen"
@@ -203,17 +167,11 @@
   "tables_should_include_at_least_one_header_48779eac": {
     "message": "Tablo yo dwe gen omwen yon antèt."
   },
-  "text_is_difficult_to_read_without_sufficient_contr_69e62bd6": {
-    "message": "Li difisil pou li tèks la si pa gen ase kontras ant tèks la ak fon an, espesyalman pou moun ki pa wè byen yo."
-  },
   "text_larger_than_18pt_or_bold_14pt_should_display__5c364db6": {
     "message": "Tèks ki pi gwo ke 18pt (oswa an gra 14pt) ta dwe afiche yon to kontras de 3:1."
   },
   "text_smaller_than_18pt_or_bold_14pt_should_display_aaffb22b": {
     "message": "Tèks ki pi piti ke 18pt (oswa an gra 14pt) ta dwe afiche yon to kontras de 4.5:1."
-  },
-  "when_markup_is_used_that_visually_formats_items_as_f941fc1b": {
-    "message": "Lè yo itilize balizaj pou yo ka fòmate eleman yo vizyèlman tankou lis men ki pa di relasyon lis la, itilizatè yo ka rankontre difikilte pou navige nan enfómasyon yo. "
   },
   "why_523b3d8c": {
     "message": "Poukisa"

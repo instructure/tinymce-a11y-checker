@@ -38,9 +38,6 @@
   "close_accessibility_checker_29d1c51e": {
     "message": "アクセシビリティチェッカーを閉じる"
   },
-  "close_d634289d": {
-    "message": "閉じる"
-  },
   "column_e1ae5c64": {
     "message": "列"
   },
@@ -55,9 +52,6 @@
   },
   "fix_heading_hierarchy_f60884c4": {
     "message": "見出しヒエアルキーを修正する"
-  },
-  "format_as_a_list_142210c3": {
-    "message": "リスト形式"
   },
   "header_column_f27433cb": {
     "message": "ヘッダー列"
@@ -92,41 +86,11 @@
   "keyboards_navigate_to_links_using_the_tab_key_two__5fab8c82": {
     "message": "キーボードは Tab キーを使用してリンクにナビゲートします。同じ宛先に向かう2つの隣接リンクがあると、キーボードユーザーに混乱を招く可能性があります。"
   },
-  "learn_more_about_adjacent_links_2cb9762c": {
-    "message": "隣接リンクの詳細"
-  },
-  "learn_more_about_color_contrast_c019dfb9": {
-    "message": "カラーコントラストの詳細"
-  },
-  "learn_more_about_organizing_page_headings_8a7caa2e": {
-    "message": "ページヘッダーの整理の詳細"
-  },
-  "learn_more_about_table_headers_5f5ee13": {
-    "message": "表ヘッダーの詳細"
-  },
-  "learn_more_about_using_alt_text_for_images_5698df9a": {
-    "message": "代替テキストを画像に使用する方法の詳細"
-  },
-  "learn_more_about_using_captions_with_tables_36fe496f": {
-    "message": "表でキャプションを使用する方法の詳細"
-  },
-  "learn_more_about_using_filenames_as_alt_text_264286af": {
-    "message": "ファイル名を代替テキストに使用する方法の詳細"
-  },
-  "learn_more_about_using_lists_4e6eb860": {
-    "message": "リスト使用の詳細"
-  },
-  "learn_more_about_using_scope_attributes_with_table_20df49aa": {
-    "message": "表でスコープ属性を使用する方法の詳細"
-  },
   "leave_as_is_4facfe55": {
     "message": "そのままにする"
   },
   "link_with_text_starting_with_start_b3fcbe71": {
     "message": "{ start } で始まるテキストとのリンク"
-  },
-  "lists_should_be_formatted_as_lists_f862de8d": {
-    "message": "リストはリスト形式にしなければなりません。"
   },
   "merge_links_2478df96": {
     "message": "リンクをマージする"
@@ -203,17 +167,11 @@
   "tables_should_include_at_least_one_header_48779eac": {
     "message": "表には、少なくとも1つのヘッダーが含まれていなければなりません。"
   },
-  "text_is_difficult_to_read_without_sufficient_contr_69e62bd6": {
-    "message": "テキストは、テキストと背景との間に十分なコントラストがなければ、特に視力の弱い人にとっては読みにくくなります。"
-  },
   "text_larger_than_18pt_or_bold_14pt_should_display__5c364db6": {
     "message": "18pt（または太字14pt）より大きいテキストは、3：1の最小コントラスト比で表示しなければなりません。"
   },
   "text_smaller_than_18pt_or_bold_14pt_should_display_aaffb22b": {
     "message": "18pt（または太字14pt）より小きいテキストは、4.5：1の最小コントラスト比で表示しなければなりません。"
-  },
-  "when_markup_is_used_that_visually_formats_items_as_f941fc1b": {
-    "message": "アイテムをリスト形式に視覚的にフォーマットするマークアップが使用されますが、リストの関係を示唆するものではなく、ユーザが情報をナビゲートするのは難しいかもしれません。"
   },
   "why_523b3d8c": {
     "message": "理由"
