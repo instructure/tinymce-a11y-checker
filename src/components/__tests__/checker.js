@@ -329,35 +329,91 @@ describe("formStateValid", () => {
 describe("fixIssue", () => {
   let ev, error
 
-  beforeEach(async () => {
-    await promisify(instance.check.bind(instance))()
-    component.update()
-    error = instance.state.errors[0]
-    ev = { preventDefault: jest.fn() }
-    jest.spyOn(instance, "check")
+  describe("_fixSingleError", () => {
+    beforeEach(async () => {
+      await promisify(instance.check.bind(instance))()
+      component.update()
+      error = instance.state.errors[0]
+      ev = { preventDefault: jest.fn() }
+      jest.spyOn(instance, "check")
+    })
+
+    test("updates the real node", () => {
+      instance.fixIssue(ev)
+      const formState = instance.state.formState
+      expect(error.rule.update).toHaveBeenCalledWith(error.node, formState)
+    })
+
+    test("checks everything after applying a fix", () => {
+      instance.fixIssue(ev)
+      expect(instance.check).toHaveBeenCalled()
+    })
+
+    test("does nothing if there are no errors", () => {
+      instance.state.errors = []
+      instance.fixIssue(ev)
+      expect(instance.check).not.toHaveBeenCalled()
+    })
+
+    test("focuses the close button", () => {
+      instance._closeButtonRef = { focus: jest.fn() }
+      instance.fixIssue(ev)
+      expect(instance._closeButtonRef.focus).toHaveBeenCalled()
+    })
   })
 
-  test("updates the real node", () => {
-    instance.fixIssue(ev)
-    const formState = instance.state.formState
-    expect(error.rule.update).toHaveBeenCalledWith(error.node, formState)
-  })
+  describe("_fixBulkError", () => {
+    beforeEach(async () => {
+      node.appendChild(document.createElement("div"))
 
-  test("checks everything after applying a fix", () => {
-    instance.fixIssue(ev)
-    expect(instance.check).toHaveBeenCalled()
-  })
+      await promisify(instance.check.bind(instance))()
+      component.update()
+      error = instance.state.errors[0]
+      ev = { preventDefault: jest.fn() }
+      jest.spyOn(instance, "check")
 
-  test("does nothing if there are no errors", () => {
-    instance.state.errors = []
-    instance.fixIssue(ev)
-    expect(instance.check).not.toHaveBeenCalled()
-  })
+      const newErrors = instance.state.errors
+      newErrors.forEach(err => (err.rule.bulkUpdateSupported = true))
+      component.setState({ errors: newErrors, formStateBulkUpdateEnabled: true })
+    })
 
-  test("focuses the close button", () => {
-    instance._closeButtonRef = { focus: jest.fn() }
-    instance.fixIssue(ev)
-    expect(instance._closeButtonRef.focus).toHaveBeenCalled()
+    test("updates the real nodes", () => {
+      const [error1, error2, error3] = instance.state.errors
+      instance.fixIssue(ev)
+      const formState = instance.state.formState
+      expect(error1.rule.update).toHaveBeenCalledWith(error1.node, formState)
+      expect(error2.rule.update).toHaveBeenCalledWith(error2.node, formState)
+      expect(error3.rule.update).toHaveBeenCalledWith(error3.node, formState)
+    })
+
+    test("does not update the other error node", async () => {
+      const newErrors = instance.state.errors
+      newErrors[2].rule = {...newErrors[0].rule, id: 'another-error', update: jest.fn()}
+      component.setState({ errors: newErrors, formStateBulkUpdateEnabled: true })
+      const [error1, error2, error3] = instance.state.errors
+      instance.fixIssue(ev)
+      const formState = instance.state.formState
+      expect(error1.rule.update).toHaveBeenCalledWith(error1.node, formState)
+      expect(error2.rule.update).toHaveBeenCalledWith(error2.node, formState)
+      expect(error3.rule.update).not.toHaveBeenCalled()
+    })
+
+    test("checks everything after applying a fix", () => {
+      instance.fixIssue(ev)
+      expect(instance.check).toHaveBeenCalled()
+    })
+
+    test("does nothing if there are no errors", () => {
+      instance.state.errors = []
+      instance.fixIssue(ev)
+      expect(instance.check).not.toHaveBeenCalled()
+    })
+
+    test("focuses the close button", () => {
+      instance._closeButtonRef = { focus: jest.fn() }
+      instance.fixIssue(ev)
+      expect(instance._closeButtonRef.focus).toHaveBeenCalled()
+    })
   })
 })
 

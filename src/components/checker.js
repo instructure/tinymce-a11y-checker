@@ -42,6 +42,7 @@ export default class Checker extends React.Component {
     errors: [],
     formState: {},
     formStateValid: false,
+    formStateBulkUpdateEnabled: false,
     errorIndex: 0,
     config: {},
     showWhyPopover: false,
@@ -206,6 +207,7 @@ export default class Checker extends React.Component {
     this.setState({
       formState,
       formStateValid: this.formStateValid(formState),
+      formStateBulkUpdateEnabled: false,
     })
   }
 
@@ -224,7 +226,7 @@ export default class Checker extends React.Component {
     return rule.test(node)
   }
 
-  fixIssue() {
+  _fixNode(doneCallback) {
     const rule = this.errorRule()
     let node = this.errorNode()
     if (rule && node) {
@@ -234,8 +236,44 @@ export default class Checker extends React.Component {
       if (this._closeButtonRef) {
         this._closeButtonRef.focus()
       }
-      const errorIndex = this.state.errorIndex
-      this.check(() => this.setErrorIndex(errorIndex))
+      this.check(doneCallback)
+    }
+  }
+
+  _findMatchErrorIndexes(ruleId) {
+    return this.state.errors.reduce((result, {rule}, index) => {
+      if (rule.id === ruleId) {
+        result.push(index)
+      }
+      return result
+    }, [])
+  }
+
+  _fixSingleError() {
+    const errorIndex = this.state.errorIndex
+    this._fixNode(() => this.setErrorIndex(errorIndex))
+  }
+
+  _fixBulkError() {
+    const fixMatchedErrors = (ruleId) => {
+      const indexes = this._findMatchErrorIndexes(ruleId)
+      if (indexes.length === 0) {
+        return
+      }
+      const errorIndex = indexes[0]
+      this.setErrorIndex(errorIndex)
+      this._fixNode(fixMatchedErrors)
+    }
+    const rule = this.errorRule()
+    this._fixNode(() => fixMatchedErrors(rule.id))
+  }
+
+  fixIssue() {
+    const rule = this.errorRule()
+    if (this.state.formStateBulkUpdateEnabled && rule?.bulkUpdateSupported) {
+      this._fixBulkError()
+    } else {
+      this._fixSingleError()
     }
   }
 
@@ -295,6 +333,8 @@ export default class Checker extends React.Component {
       num: this.state.errorIndex + 1,
       total: this.state.errors.length,
     })
+    const showBulkUpdate = rule && rule.bulkUpdateSupported && this._findMatchErrorIndexes(rule.id).length > 1 &&
+        this.state.formStateValid
 
     return (
       <LiveAnnouncer>
@@ -410,6 +450,17 @@ export default class Checker extends React.Component {
                       {this.renderField(f)}
                     </View>
                   ))}
+                  {
+                    showBulkUpdate &&
+                    <View as="div" margin="medium 0">
+                      <Checkbox
+                          label={formatMessage("Bulk update")}
+                          name="bulk-update"
+                          checked={this.state.formStateBulkUpdateEnabled}
+                          onChange={(e) => this.setState({formStateBulkUpdateEnabled: e.target.checked})}
+                      />
+                    </View>
+                  }
                   <View as="div" margin="medium 0">
                     <Grid
                       vAlign="middle"

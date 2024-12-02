@@ -42,6 +42,7 @@ export default [
     message: jest.fn().mockReturnValue("Error Message"),
     why: jest.fn().mockReturnValue("Why Text"),
     link: "http://some-url",
-    linkText: jest.fn().mockReturnValue("Link for learning more")
+    linkText: jest.fn().mockReturnValue("Link for learning more"),
+    id: "mock-error"
   }
 ]
